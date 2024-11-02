@@ -1,0 +1,70 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Field01",
+    "type": "int"
+  },
+  {
+    "name": "Field02",
+    "type": "int"
+  },
+  {
+    "name": "DisplayPower",
+    "type": "int"
+  },
+  {
+    "name": "PetNameToken",
+    "type": "int"
+  },
+  {
+    "name": "Name_Lang_enUS",
+    "type": "string"
+  },
+  {
+    "name": "Name_Lang_enGB",
+    "type": "string"
+  },
+  {
+    "name": "Name_Lang_koKR",
+    "type": "string"
+  },
+  {
+    "name": "Name_Lang_frFR",
+    "type": "string"
+  },
+  {
+    "name": "Name_Lang_deDE",
+    "type": "string"
+  },
+  {
+    "name": "Name_Lang_enCN",
+    "type": "string"
+  },
+  {
+    "name": "Name_Lang_zhCN",
+    "type": "string"
+  },
+  {
+    "name": "Name_Lang_enTW",
+    "type": "string"
+  },
+  {
+    "name": "Name_Mask",
+    "type": "uint"
+  },
+  {
+    "name": "Filename",
+    "type": "string"
+  },
+  {
+    "name": "SpellClassSet",
+    "type": "int"
+  },
+  {
+    "name": "Flags",
+    "type": "int"
+  }
+]

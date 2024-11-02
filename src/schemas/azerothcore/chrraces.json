@@ -1,0 +1,118 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Flags",
+    "type": "int"
+  },
+  {
+    "name": "FactionID",
+    "type": "int"
+  },
+  {
+    "name": "ExplorationSoundID",
+    "type": "int"
+  },
+  {
+    "name": "MaleDisplayId",
+    "type": "int"
+  },
+  {
+    "name": "FemaleDisplayId",
+    "type": "int"
+  },
+  {
+    "name": "ClientPrefix",
+    "type": "string"
+  },
+  {
+    "name": "Speed",
+    "type": "int"
+  },
+  {
+    "name": "BaseLanguage",
+    "type": "int"
+  },
+  {
+    "name": "CreatureType",
+    "type": "int"
+  },
+  {
+    "name": "LoginEffect",
+    "type": "int"
+  },
+  {
+    "name": "UnalteredVisualRaceID",
+    "type": "int"
+  },
+  {
+    "name": "ResSicknessSpellID",
+    "type": "int"
+  },
+  {
+    "name": "SplashSoundID",
+    "type": "int"
+  },
+  {
+    "name": "Field14",
+    "type": "int"
+  },
+  {
+    "name": "ClientFilestring",
+    "type": "string"
+  },
+  {
+    "name": "CinematicSequenceID",
+    "type": "int"
+  },
+  {
+    "name": "Name_Lang_enUS",
+    "type": "string"
+  },
+  {
+    "name": "Name_Lang_enGB",
+    "type": "string"
+  },
+  {
+    "name": "Name_Lang_koKR",
+    "type": "string"
+  },
+  {
+    "name": "Name_Lang_frFR",
+    "type": "string"
+  },
+  {
+    "name": "Name_Lang_deDE",
+    "type": "string"
+  },
+  {
+    "name": "Name_Lang_enCN",
+    "type": "string"
+  },
+  {
+    "name": "Name_Lang_zhCN",
+    "type": "string"
+  },
+  {
+    "name": "Name_Lang_enTW",
+    "type": "string"
+  },
+  {
+    "name": "Name_Lang_Mask",
+    "type": "uint"
+  },
+  {
+    "name": "FacialHairCustomization_1",
+    "type": "string"
+  },
+  {
+    "name": "FacialHairCustomization_2",
+    "type": "string"
+  },
+  {
+    "name": "HairCustomization",
+    "type": "string"
+  }
+]
