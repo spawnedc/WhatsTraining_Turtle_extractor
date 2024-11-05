@@ -135,8 +135,6 @@ allClasses.forEach((cls) => {
   const classSkillLineAbilities = skillLineAbilities
     // Only include class skill lines
     .filter((sla) => classSkillLinesIds.includes(sla.SkillLine))
-    // Only include same class mask as the class
-    .filter((sla) => sla.ClassMask === cls.classMask)
     // Exclude spells hidden by the server
     .filter((sla) => !SERVER_HIDDEN_SPELLS.includes(sla.Spell));
 
@@ -153,6 +151,7 @@ allClasses.forEach((cls) => {
     .map((t) => ({
       id: t.ID,
       spell: t.SpellRank_1,
+      level: 10 + (t.TierID * 5),
       // Lua indexes start from 1 :sigh:
       tabIndex: classTalentTabsById[t.TabID].OrderIndex + 1,
     }));
@@ -191,7 +190,7 @@ allClasses.forEach((cls) => {
         id: spell.ID,
         name: spell.Name_Lang_enUS,
         subText: spell.NameSubtext_Lang_enUS,
-        level: spell.BaseLevel,
+        level: isTaughtByTalent?.level || spell.BaseLevel,
         icon: spellIconsById[spell.SpellIconID].TextureFilename,
         races: races?.length > 0 ? races : undefined,
         requiredTalent: isTaughtByTalent
