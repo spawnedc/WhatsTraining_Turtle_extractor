@@ -2,7 +2,21 @@
 
 Shamelessly copied from this amazing project: [node-dbc-reader](https://github.com/wowgaming/node-dbc-reader)
 
-1. Extract dbc files from Turtle WoW data: `MPQExtractor -p <PATH_TO_TWOW_DATA>/patch.mpq -p <PATH_TO_TWOW_DATA>/patch-*.mpq -e "DBFilesClient\*" -o ./data/dbc <PATH_TO_TWOW_DATA>/dbc.MPQ`
-2. Extract required information in json format by running `npm run export`
-3. Convert everything into lua files: `npm run convertToLua`
-4. Copy lua files from `build/lua` to `WhatsTraining_Turtle`'s `Classes/Turtle` folder
+Extract dbc files from Turtle WoW data:
+
+```bash
+MPQExtractor \
+  -p "$TURTLE_PATH/Data/patch.mpq" \
+  -p "$TURTLE_PATH/Data/patch-2.mpq" \
+  -p "$TURTLE_PATH/Data/patch-3.mpq" \
+  -p "$TURTLE_PATH/Data/patch-4.mpq" \
+  -p "$TURTLE_PATH/Data/patch-5.mpq" \
+  -p "$TURTLE_PATH/Data/patch-6.mpq" \
+  -e "DBFilesClient\*" \
+  -o ./data/dbc \
+  "$TURTLE_PATH/Data/dbc.MPQ"
+```
+
+1. Extract required information in json format by running `npm run export`
+2. Convert everything into lua files: `npm run convertToLua`
+3. Copy lua files from `build/lua` to `WhatsTraining_Turtle`'s `Classes/Turtle` folder
