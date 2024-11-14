@@ -1,12 +1,13 @@
 {
   "name": "whats-training-turtle-extractor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Data extractor for WhatsTraining_Turtle",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
     "export": "node src/export.js",
-    "convertToLua": "node src/convertToLua.js"
+    "convertToLua": "node src/convertToLua.js",
+    "test": "node src/test.js"
   },
   "author": "spawnedc",
   "dependencies": {

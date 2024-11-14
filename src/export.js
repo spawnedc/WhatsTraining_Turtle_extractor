@@ -123,18 +123,24 @@ const getSpellOverrides = (spell) => {
 allClasses.forEach((cls) => {
   console.info(`Exporting ${cls.fileName} spells...`);
 
-  const classSkillLines = skillRaceClassInfo.filter(
-    (srci) => srci.ClassMask === cls.classMask
-  );
+  const classSkillLines = skillRaceClassInfo
+    .filter((srci) => srci.ClassMask === cls.classMask)
+    // this...
+    .filter(srci => !getIdsFromMask(srci.Flags).includes(2));
   const classSkillLinesIds = classSkillLines
     .map((csl) => csl.SkillID)
     .filter(
       (skillId) => skillLinesById[skillId]?.CategoryID === 7 // Class Skills only
     );
 
+  console.info(classSkillLinesIds)
+
   const classSkillLineAbilities = skillLineAbilities
     // Only include class skill lines
     .filter((sla) => classSkillLinesIds.includes(sla.SkillLine))
+    // Only include class skill line abilities
+    // Hopefully this will exclude spells like Clearcasting
+    .filter((sla) => sla.ClassMask === cls.classMask)
     // Exclude spells hidden by the server
     .filter((sla) => !SERVER_HIDDEN_SPELLS.includes(sla.Spell));
 
