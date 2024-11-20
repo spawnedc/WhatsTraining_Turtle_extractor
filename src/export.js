@@ -215,19 +215,28 @@ allClasses.forEach((cls) => {
     .filter((spell) => spell)
     .filter((spell) => spell.level > 0)
 
-  const classSpells = allClassSpells.map((spell) => {
-    const ranks = getSpellRanks(allClassSpells, spell.name, "name", "subText");
-    const requiredId = getRequiredIdForSpellId(spell.id, ranks);
+  const classSpells = allClassSpells
+    .map((spell) => {
+      const ranks = getSpellRanks(allClassSpells, spell.name, "name", "subText")
+      const requiredId = getRequiredIdForSpellId(spell.id, ranks)
+      const spellCopy = { ...spell }
 
-    if (requiredId) {
-      return {
-        ...spell,
-        requiredIds: [requiredId],
-      };
-    }
+      if (requiredId) {
+        spellCopy.requiredIds = [requiredId]
+      }
 
-    return spell;
-  });
+      // Exclude the spells that has ranks but no rank text
+      const hasRanks = ranks.length > 0
+      const hasItselfAsRank = ranks.map((s) => s.id).includes(spellCopy.id)
+      spellCopy.shouldBeExcluded = hasRanks && !hasItselfAsRank
+
+      return spellCopy
+    })
+    .filter((cs) => !cs.shouldBeExcluded)
+    .map((s) => {
+      const { shouldBeExcluded, ...spl } = s
+      return spl
+    })
 
   const spellsByLevel = Object.groupBy(classSpells, ({ level }) => level)
 
