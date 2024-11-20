@@ -80,7 +80,12 @@ const getSpellRanks = (spells, spellName, nameField, subTextField) =>
   spells
     .filter((spl) => spl[nameField] === spellName)
     .filter((spl) => !!spl[subTextField])
-    .sort((a, b) => a[subTextField].localeCompare(b[subTextField]))
+    .sort((a, b) =>
+      a[subTextField].localeCompare(b[subTextField], "en", {
+        numeric: true,
+        sensitivity: "base",
+      })
+    )
 
 const getRequiredIdForSpellId = (spellId, ranks) => {
   if (ranks.length <= 1) {
@@ -247,6 +252,8 @@ allClasses.forEach((cls) => {
       }
     }
   })
+
+  classSpells.sort((a, b) => a.name.localeCompare(b.name))
 
   const spellsByLevel = Object.groupBy(classSpells, ({ level }) => level)
 
