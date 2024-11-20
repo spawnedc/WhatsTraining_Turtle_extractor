@@ -1,13 +1,13 @@
 const getIdsFromMask = (mask, verbose = false) => {
-  const binary = mask.toString(2);
-  const binaryArray = binary.split("").map(Number).reverse();
+  const binary = mask.toString(2)
+  const binaryArray = binary.split("").map(Number).reverse()
   const ids = binaryArray.reduce((acc, curr, index) => {
     if (curr === 1) {
-      return [...acc, index + 1];
+      return [...acc, index + 1]
     }
 
-    return acc;
-  }, []);
+    return acc
+  }, [])
   verbose &&
     console.info({
       mask,
@@ -15,9 +15,9 @@ const getIdsFromMask = (mask, verbose = false) => {
       hex: `0x${mask.toString(16)}`,
       binaryArray,
       ids,
-    });
-  return ids;
-};
+    })
+  return ids
+}
 
 const flags = []
 for (let i = 0; i < 32; i++) {
@@ -29,14 +29,14 @@ const getIdsFromMask2 = (mask, verbose = false) => {
   const maskIndexes = []
   let newMask = mask
   while (newMask > 0) {
-    const maskIndex = flags.findIndex(flag => flag > newMask) - 1;
+    const maskIndex = flags.findIndex((flag) => flag > newMask) - 1
     const maskValue = flags[maskIndex]
     newMask -= maskValue
     maskValues.push(maskValue)
     maskIndexes.push(maskIndex + 1)
   }
-  
+
   return maskIndexes
 }
 
-module.exports = getIdsFromMask2;
+module.exports = getIdsFromMask2

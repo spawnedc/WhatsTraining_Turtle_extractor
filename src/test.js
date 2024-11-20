@@ -1,4 +1,4 @@
-const getIdsFromMask = require("./utils/getIdsFromMask");
+const getIdsFromMask = require("./utils/getIdsFromMask")
 
 const maskArg = parseInt(process.argv[2], 10)
 
