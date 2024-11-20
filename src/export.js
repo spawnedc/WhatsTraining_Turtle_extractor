@@ -96,15 +96,15 @@ const getRequiredIdForSpellId = (spellId, ranks) => {
   return ranks[spellRankIndex - 1].id
 }
 
-const getSpellOverrides = (spell) => {
+const getSpellOverrides = (spells, spell) => {
   const spellsWithSameName = getSpellRanks(
-    allSpells,
+    spells,
     spell.name,
-    "Name_Lang_enUS",
-    "NameSubtext_Lang_enUS"
+    "name",
+    "subText"
   )
 
-  const spellIds = spellsWithSameName.map((s) => s.ID)
+  const spellIds = spellsWithSameName.map((s) => s.id)
   const slas = spellIds
     .map((spellId, index) => {
       const sla = skillLineAbilitiesBySpellId[spellId]
@@ -114,10 +114,9 @@ const getSpellOverrides = (spell) => {
       return sla?.SupercededBySpell
     })
     .flat()
+    .filter((s) => s)
 
-  const filteredSlaIds = slas.filter((sla) => sla)
-
-  return filteredSlaIds
+  return slas
 }
 
 allClasses.forEach((cls) => {
@@ -163,7 +162,7 @@ allClasses.forEach((cls) => {
 
   let hasRaceMask = false
 
-  const overriddenSpellsMap = {}
+  let overriddenSpellsMap = {}
 
   const allClassSpells = classSkillLineAbilities
     .map((sla) => {
@@ -203,13 +202,6 @@ allClasses.forEach((cls) => {
           : undefined,
       }
 
-      if (sla.SupercededBySpell) {
-        const overrideIds = getSpellOverrides(newSpell)
-        if (overrideIds.length > 1) {
-          overriddenSpellsMap[overrideIds[0]] = overrideIds
-        }
-      }
-
       return newSpell
     })
     .filter((spell) => spell)
@@ -238,12 +230,30 @@ allClasses.forEach((cls) => {
       return spl
     })
 
+  classSpells.forEach((spell) => {
+    const sla = skillLineAbilitiesBySpellId[spell.id]
+    if (sla?.SupercededBySpell) {
+      const overrideIds = getSpellOverrides(classSpells, spell)
+      if (overrideIds.length > 1) {
+        overriddenSpellsMap = overrideIds.reduce((acc, overrideId, index) => {
+          if (index === 0) {
+            return acc
+          }
+          return {
+            ...acc,
+            [overrideId]: [...overrideIds].slice(0, index),
+          }
+        }, overriddenSpellsMap)
+      }
+    }
+  })
+
   const spellsByLevel = Object.groupBy(classSpells, ({ level }) => level)
 
   const classData = {
     fileName: cls.fileName,
     hasRaceMask,
-    overriddenSpellsMap: Object.values(overriddenSpellsMap),
+    overriddenSpellsMap,
     spellsByLevel,
   }
 
