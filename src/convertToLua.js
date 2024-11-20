@@ -20,7 +20,7 @@ classFiles.forEach((classFile) => {
 
   const content = ["setfenv(1, WhatsTraining)"]
 
-  if (classData.overriddenSpellsMap?.length) {
+  if (Object.values(classData.overriddenSpellsMap).length) {
     const overriddenSpellsMap = jsonToLua.jsonToLuaPretty(
       JSON.stringify(classData.overriddenSpellsMap),
       1
