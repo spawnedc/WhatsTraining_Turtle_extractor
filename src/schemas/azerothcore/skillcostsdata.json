@@ -1,0 +1,22 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "SkillCostsID",
+    "type": "uint"
+  },
+  {
+    "name": "Cost1",
+    "type": "int"
+  },
+  {
+    "name": "Cost2",
+    "type": "int"
+  },
+  {
+    "name": "Cost3",
+    "type": "int"
+  }
+]
