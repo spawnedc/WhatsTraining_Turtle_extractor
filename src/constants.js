@@ -17,16 +17,23 @@ const SPELL_ATTRIBUTES = {
  * For some reason these are not excluded by any filters and I couldn't find a
  * way to exclude them. Please let me know if there's a better way.
  */
-const SERVER_HIDDEN_SPELLS = [
-  12494, // Mage: Frostbite
-  12355, // Mage: Impact,
-  23455, // Priest: Holy Nova Rank 1
-  23458, // Priest: Holy Nova Rank 2
-  23459, // Priest: Holy Nova Rank 3
-  27803, // Priest: Holy Nova Rank 4
-  27804, // Priest: Holy Nova Rank 5
-  27805, // Priest: Holy Nova Rank 6
-]
+const SERVER_HIDDEN_SPELLS = {
+  DRUID: [],
+  HUNTER: [],
+  MAGE: [
+    12494, // Frostbite
+    12355, // Impact,
+    12484, // Chilled Rank 1
+  ],
+  PALADIN: [],
+  PRIEST: [
+    // 23455, // Holy Nova Rank 1
+  ],
+  ROGUE: [],
+  SHAMAN: [],
+  WARLOCK: [],
+  WARRIOR: [],
+}
 
 module.exports = {
   BASE_DIR,

@@ -76,16 +76,11 @@ const skillLinesById = arrayToObject(skillLines, "ID")
 const skillLineAbilities = require(FILE_SKILL_LINE_ABILITIES)
 const skillLineAbilitiesBySpellId = arrayToObject(skillLineAbilities, "Spell")
 
-const getSpellRanks = (spells, spellName, nameField, subTextField) =>
+const getSpellRanks = (spells, spellName) =>
   spells
-    .filter((spl) => spl[nameField] === spellName)
-    .filter((spl) => !!spl[subTextField])
-    .sort((a, b) =>
-      a[subTextField].localeCompare(b[subTextField], "en", {
-        numeric: true,
-        sensitivity: "base",
-      })
-    )
+    .filter((spl) => spl.name === spellName)
+    .filter((spl) => !!spl.rank)
+    .sort((a, b) => a.rank - b.rank)
 
 const getRequiredIdForSpellId = (spellId, ranks) => {
   if (ranks.length <= 1) {
@@ -102,12 +97,7 @@ const getRequiredIdForSpellId = (spellId, ranks) => {
 }
 
 const getSpellOverrides = (spells, spell) => {
-  const spellsWithSameName = getSpellRanks(
-    spells,
-    spell.name,
-    "name",
-    "subText"
-  )
+  const spellsWithSameName = getSpellRanks(spells, spell.name)
 
   const spellIds = spellsWithSameName.map((s) => s.id)
   const slas = spellIds
@@ -126,10 +116,11 @@ const getSpellOverrides = (spells, spell) => {
 
 allClasses.forEach((cls) => {
   console.info(`Exporting ${cls.fileName} spells...`)
+  console.info(cls)
 
   const classSkillLines = skillRaceClassInfo
     .filter((srci) => srci.ClassMask === cls.classMask)
-    // this...
+    // this... Do not display in skills (hidden client side)
     .filter((srci) => !getIdsFromMask(srci.Flags).includes(2))
 
   const classSkillLinesIds = classSkillLines
@@ -143,9 +134,9 @@ allClasses.forEach((cls) => {
     .filter((sla) => classSkillLinesIds.includes(sla.SkillLine))
     // Only include class skill line abilities
     // Hopefully this will exclude spells like Clearcasting
-    .filter((sla) => sla.ClassMask === cls.classMask)
+    // .filter((sla) => sla.ClassMask === cls.classMask)
     // Exclude spells hidden by the server
-    .filter((sla) => !SERVER_HIDDEN_SPELLS.includes(sla.Spell))
+    .filter((sla) => !SERVER_HIDDEN_SPELLS[cls.fileName].includes(sla.Spell))
 
   const classTalentTabsById = arrayToObject(talentTabs, "ID")
 
@@ -195,10 +186,14 @@ allClasses.forEach((cls) => {
 
       hasRaceMask = hasRaceMask || !!races
 
+      const rank = spell.NameSubtext_Lang_enUS
+        ? parseInt(spell.NameSubtext_Lang_enUS.replace("Rank ", ""), 10)
+        : 0
       const newSpell = {
         id: spell.ID,
         name: spell.Name_Lang_enUS,
         subText: spell.NameSubtext_Lang_enUS,
+        rank,
         level: isTaughtByTalent?.level || spell.BaseLevel,
         icon: spellIconsById[spell.SpellIconID].TextureFilename,
         races: races?.length > 0 ? races : undefined,
@@ -212,33 +207,10 @@ allClasses.forEach((cls) => {
     .filter((spell) => spell)
     .filter((spell) => spell.level > 0)
 
-  const classSpells = allClassSpells
-    .map((spell) => {
-      const ranks = getSpellRanks(allClassSpells, spell.name, "name", "subText")
-      const requiredId = getRequiredIdForSpellId(spell.id, ranks)
-      const spellCopy = { ...spell }
-
-      if (requiredId) {
-        spellCopy.requiredIds = [requiredId]
-      }
-
-      // Exclude the spells that has ranks but no rank text
-      const hasRanks = ranks.length > 0
-      const hasItselfAsRank = ranks.map((s) => s.id).includes(spellCopy.id)
-      spellCopy.shouldBeExcluded = hasRanks && !hasItselfAsRank
-
-      return spellCopy
-    })
-    .filter((cs) => !cs.shouldBeExcluded)
-    .map((s) => {
-      const { shouldBeExcluded, ...spl } = s
-      return spl
-    })
-
-  classSpells.forEach((spell) => {
+  allClassSpells.forEach((spell) => {
     const sla = skillLineAbilitiesBySpellId[spell.id]
     if (sla?.SupercededBySpell) {
-      const overrideIds = getSpellOverrides(classSpells, spell)
+      const overrideIds = getSpellOverrides(allClassSpells, spell)
       if (overrideIds.length > 1) {
         overriddenSpellsMap = overrideIds.reduce((acc, overrideId, index) => {
           if (index === 0) {
@@ -252,6 +224,49 @@ allClasses.forEach((cls) => {
       }
     }
   })
+
+  const classSpells = allClassSpells
+    .map((spell) => {
+      const ranks = getSpellRanks(allClassSpells, spell.name)
+      const requiredId = getRequiredIdForSpellId(spell.id, ranks)
+      const spellCopy = { ...spell }
+
+      if (requiredId) {
+        spellCopy.requiredIds = [requiredId]
+      }
+
+      // Exclude the spells that has ranks but no rank text, and doesn't have a complete set of ranks
+      const hasRanks = ranks.length > 0
+      const lastRank = ranks[ranks.length - 1]
+      const allRanksExist = hasRanks ? lastRank.rank === ranks.length : true
+      const hasItselfAsRank = ranks.map((s) => s.id).includes(spellCopy.id)
+      const excludeDueToRanks = hasRanks && (!hasItselfAsRank || !allRanksExist)
+
+      const isTriggeredSpell = allSpells.find((spl) => {
+        const triggers = [
+          spl.EffectTriggerSpell1,
+          spl.EffectTriggerSpell2,
+          spl.EffectTriggerSpell3,
+        ]
+        return triggers.includes(spell.id)
+      })
+
+      const excludedDueToTriggeringSpell =
+        isTriggeredSpell &&
+        getIdsFromMask(isTriggeredSpell.Attributes).includes(
+          SPELL_ATTRIBUTES.SPELL_ATTR0_DO_NOT_DISPLAY_SPELLBOOK_AURA_ICON_COMBAT_LOG
+        )
+
+      spellCopy.shouldBeExcluded =
+        excludeDueToRanks || excludedDueToTriggeringSpell
+
+      return spellCopy
+    })
+    .filter((cs) => !cs.shouldBeExcluded)
+    .map((s) => {
+      const { shouldBeExcluded, rank, ...spl } = s
+      return spl
+    })
 
   classSpells.sort((a, b) => a.name.localeCompare(b.name))
 

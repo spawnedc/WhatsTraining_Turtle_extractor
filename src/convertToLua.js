@@ -4,6 +4,8 @@ const jsonToLua = require("json_to_lua")
 const path = require("path")
 const { EXPORT_DIR, CLASSES_DIR, LUA_DIR } = require("./constants")
 
+const targetDir = process.argv[2] || LUA_DIR
+
 execSync(`mkdir -p ${LUA_DIR}`)
 
 const classes = require(`./${path.join(EXPORT_DIR, "ChrClasses.json")}`)
@@ -30,5 +32,7 @@ classFiles.forEach((classFile) => {
 
   content.push(`ClassSpellsByLevel["${className}"] = ${luaContent}`)
 
-  writeFileSync(path.join(LUA_DIR, `${className}.lua`), content.join("\n"))
+  const targetFile = path.join(targetDir, `${className}.lua`)
+  console.info("Writing ", targetFile)
+  writeFileSync(targetFile, content.join("\n"))
 })
