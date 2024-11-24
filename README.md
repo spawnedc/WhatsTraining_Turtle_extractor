@@ -6,8 +6,8 @@ Extract dbc files from Turtle WoW data:
 
 ```bash
 MPQExtractor \
-  -p "$TURTLE_PATH/Data/patch.mpq" \
-  -p "$TURTLE_PATH/Data/patch-2.mpq" \
+  -p "$TURTLE_PATH/Data/patch.MPQ" \
+  -p "$TURTLE_PATH/Data/patch-2.MPQ" \
   -p "$TURTLE_PATH/Data/patch-3.mpq" \
   -p "$TURTLE_PATH/Data/patch-4.mpq" \
   -p "$TURTLE_PATH/Data/patch-5.mpq" \
