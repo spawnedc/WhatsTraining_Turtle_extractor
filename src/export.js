@@ -12,16 +12,17 @@ const {
   SERVER_HIDDEN_SPELLS,
 } = require("./constants")
 const getInitialData = require("./utils/getInitialData")
+const getObjectDiff = require("./utils/getdiff")
 
 const hiddenSpellAttributes = [
   SPELL_ATTRIBUTES.SPELL_ATTR0_DO_NOT_DISPLAY_SPELLBOOK_AURA_ICON_COMBAT_LOG,
   // SPELL_ATTRIBUTES.SPELL_ATTR0_DO_NOT_LOG,
 ]
 
-const getSpellRanks = (spells, spellName) =>
+const getSpellRanks = (spells, spellName, includeNonRanks = false) =>
   spells
     .filter((spl) => spl.name === spellName)
-    .filter((spl) => !!spl.rank)
+    .filter((spl) => (includeNonRanks ? true : !!spl.rank))
     .sort((a, b) => a.rank - b.rank)
 
 const getRequiredIdForSpellId = (spellId, ranks) => {
@@ -178,10 +179,63 @@ const start = (classNames, extractDbc) => {
       .filter((spell) => spell)
       .filter((spell) => spell.level > 0)
 
-    allClassSpells.forEach((spell) => {
+    const cleanedClassSpells = allClassSpells
+      .map((spell) => {
+        const ranks = getSpellRanks(allClassSpells, spell.name, true)
+        const spellCopy = { ...spell }
+
+        let excludeDueToDuplicateRank = false
+
+        // exclude the duplicate ranks
+        const uniqueRanks = Array.from(new Set(ranks.map((r) => r.rank)))
+        // console.info(spell.name, ranks.length, uniqueRanks.length)
+        if (ranks.length !== uniqueRanks.length) {
+          // console.info(ranks)
+          // first remove the ones that doesn't have ranks
+          const nonRanks = ranks.filter((r) => r.rank === 0).map((s) => s.id)
+
+          excludeDueToDuplicateRank =
+            nonRanks.length !== ranks.length && nonRanks.includes(spell.id)
+
+          if (!excludeDueToDuplicateRank) {
+            const rank1s = ranks.filter((r) => r.rank === spell.rank)
+            const spells = rank1s.map((r) => allSpellsById[r.id])
+            // first, check mana cost
+            const manaCosts = spells.filter((s) => s.ManaCost > 0)
+            if (manaCosts.length === 1) {
+              // bingo! we have our spell
+              console.info(
+                manaCosts[0].Name_Lang_enUS,
+                manaCosts[0].NameSubtext_Lang_enUS,
+                "should have id",
+                manaCosts[0].ID
+              )
+
+              excludeDueToDuplicateRank = spell.id !== manaCosts[0].ID
+            }
+          } else {
+            console.info(
+              spell.name,
+              spell.id,
+              "has been removed due to not having a rank"
+            )
+          }
+        }
+
+        spellCopy.shouldBeExcluded = excludeDueToDuplicateRank // || excludeDueToRanks
+
+        return spellCopy
+      })
+      .filter((cs) => !cs.shouldBeExcluded)
+      .map((s) => {
+        const { shouldBeExcluded, ...spl } = s
+        return spl
+      })
+
+    cleanedClassSpells.forEach((spell) => {
       const sla = skillLineAbilitiesBySpellId[spell.id]
       if (sla?.SupercededBySpell) {
-        const overrideIds = getSpellOverrides(allClassSpells, spell)
+        const overrideIds = getSpellOverrides(cleanedClassSpells, spell)
         if (overrideIds.length > 1) {
           overriddenSpellsMap = overrideIds.reduce((acc, overrideId, index) => {
             if (index === 0) {
@@ -196,9 +250,9 @@ const start = (classNames, extractDbc) => {
       }
     })
 
-    const classSpells = allClassSpells
+    const classSpells = cleanedClassSpells
       .map((spell) => {
-        const ranks = getSpellRanks(allClassSpells, spell.name)
+        const ranks = getSpellRanks(cleanedClassSpells, spell.name)
         const requiredId = getRequiredIdForSpellId(spell.id, ranks)
         const spellCopy = { ...spell }
 
@@ -206,36 +260,11 @@ const start = (classNames, extractDbc) => {
           spellCopy.requiredIds = [requiredId]
         }
 
-        // Exclude the spells that has ranks but no rank text, and doesn't have a complete set of ranks
-        const hasRanks = ranks.length > 0
-        const lastRank = ranks[ranks.length - 1]
-        const allRanksExist = hasRanks ? lastRank.rank === ranks.length : true
-        const hasItselfAsRank = ranks.map((s) => s.id).includes(spellCopy.id)
-        const excludeDueToRanks =
-          hasRanks && (!hasItselfAsRank || !allRanksExist)
-
-        const isTriggeredSpell = allSpells.find((spl) => {
-          const triggers = [
-            spl.EffectTriggerSpell1,
-            spl.EffectTriggerSpell2,
-            spl.EffectTriggerSpell3,
-          ]
-          return triggers.includes(spell.id)
-        })
-
-        const excludedDueToTriggeringSpell =
-          isTriggeredSpell &&
-          getIdsFromMask(isTriggeredSpell.Attributes).includes(
-            SPELL_ATTRIBUTES.SPELL_ATTR0_DO_NOT_DISPLAY_SPELLBOOK_AURA_ICON_COMBAT_LOG
-          )
-
-        spellCopy.shouldBeExcluded = excludeDueToRanks // || excludedDueToTriggeringSpell
-
         return spellCopy
       })
       .filter((cs) => !cs.shouldBeExcluded)
       .map((s) => {
-        const { shouldBeExcluded, rank, ...spl } = s
+        const { rank, ...spl } = s
         return spl
       })
 

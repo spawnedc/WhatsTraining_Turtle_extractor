@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "export": "node src/export.js",
-    "build": "npm run export && npm run convertToLua ../WhatsTraining_Turtle/Classes/Turtle",
+    "build": "npm run export && npm run convertToLua -- -o ../WhatsTraining_Turtle/Classes/Turtle",
     "convertToLua": "node src/convertToLua.js",
     "test": "node src/test.js"
   },
