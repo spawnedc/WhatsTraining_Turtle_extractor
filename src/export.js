@@ -185,6 +185,31 @@ const start = (classNames, extractDbc) => {
         const ranks = getSpellRanks(allClassSpells, spell.name, true)
         const spellCopy = { ...spell }
 
+        const isTriggeredBySpell = allSpells.find((acs) =>
+          [
+            acs.EffectTriggerSpell1,
+            acs.EffectTriggerSpell2,
+            acs.EffectTriggerSpell3,
+          ].includes(spell.id)
+        )
+
+        let excludedDueToHiddenTriggerer = false
+
+        if (isTriggeredBySpell) {
+          const spellAttributes = getIdsFromMask(isTriggeredBySpell.Attributes)
+          excludedDueToHiddenTriggerer = hiddenSpellAttributes.some(
+            (hiddenSpellAttribute) =>
+              spellAttributes.includes(hiddenSpellAttribute)
+          )
+          if (excludedDueToHiddenTriggerer) {
+            console.info(
+              spell.name,
+              spell.id,
+              "has been removed due to being triggered by an invisible spell"
+            )
+          }
+        }
+
         let excludeDueToDuplicateRank = false
 
         // first remove the ones that doesn't have ranks
@@ -200,12 +225,6 @@ const start = (classNames, extractDbc) => {
           const manaCosts = spells.filter((s) => s.ManaCost > 0)
           if (manaCosts.length === 1) {
             // bingo! we have our spell
-            console.info(
-              manaCosts[0].Name_Lang_enUS,
-              manaCosts[0].NameSubtext_Lang_enUS,
-              "should have id",
-              manaCosts[0].ID
-            )
 
             excludeDueToDuplicateRank = spell.id !== manaCosts[0].ID
           }
@@ -217,7 +236,8 @@ const start = (classNames, extractDbc) => {
           )
         }
 
-        spellCopy.shouldBeExcluded = excludeDueToDuplicateRank // || excludeDueToRanks
+        spellCopy.shouldBeExcluded =
+          excludeDueToDuplicateRank || excludedDueToHiddenTriggerer // || excludeDueToRanks
 
         return spellCopy
       })
