@@ -12,6 +12,7 @@ MPQExtractor \
   -p "$TURTLE_PATH/Data/patch-4.mpq" \
   -p "$TURTLE_PATH/Data/patch-5.mpq" \
   -p "$TURTLE_PATH/Data/patch-6.mpq" \
+  -p "$TURTLE_PATH/Data/patch-7.mpq" \
   -e "DBFilesClient\*" \
   -o ./data/dbc \
   "$TURTLE_PATH/Data/dbc.MPQ"

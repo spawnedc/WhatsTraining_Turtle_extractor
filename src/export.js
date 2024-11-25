@@ -169,6 +169,7 @@ const start = (classNames, extractDbc) => {
           level: isTaughtByTalent?.level || spell.BaseLevel,
           icon: spellIconsById[spell.SpellIconID].TextureFilename,
           races: races?.length > 0 ? races : undefined,
+          school: skillLinesById[sla.SkillLine].DisplayName_Lang_enUS,
           requiredTalent: isTaughtByTalent
             ? { id: isTaughtByTalent.id, tabIndex: isTaughtByTalent.tabIndex }
             : undefined,
@@ -186,40 +187,34 @@ const start = (classNames, extractDbc) => {
 
         let excludeDueToDuplicateRank = false
 
-        // exclude the duplicate ranks
-        const uniqueRanks = Array.from(new Set(ranks.map((r) => r.rank)))
-        // console.info(spell.name, ranks.length, uniqueRanks.length)
-        if (ranks.length !== uniqueRanks.length) {
-          // console.info(ranks)
-          // first remove the ones that doesn't have ranks
-          const nonRanks = ranks.filter((r) => r.rank === 0).map((s) => s.id)
+        // first remove the ones that doesn't have ranks
+        const nonRanks = ranks.filter((r) => r.rank === 0).map((s) => s.id)
 
-          excludeDueToDuplicateRank =
-            nonRanks.length !== ranks.length && nonRanks.includes(spell.id)
+        excludeDueToDuplicateRank =
+          nonRanks.length !== ranks.length && nonRanks.includes(spell.id)
 
-          if (!excludeDueToDuplicateRank) {
-            const rank1s = ranks.filter((r) => r.rank === spell.rank)
-            const spells = rank1s.map((r) => allSpellsById[r.id])
-            // first, check mana cost
-            const manaCosts = spells.filter((s) => s.ManaCost > 0)
-            if (manaCosts.length === 1) {
-              // bingo! we have our spell
-              console.info(
-                manaCosts[0].Name_Lang_enUS,
-                manaCosts[0].NameSubtext_Lang_enUS,
-                "should have id",
-                manaCosts[0].ID
-              )
-
-              excludeDueToDuplicateRank = spell.id !== manaCosts[0].ID
-            }
-          } else {
+        if (!excludeDueToDuplicateRank) {
+          const rank1s = ranks.filter((r) => r.rank === spell.rank)
+          const spells = rank1s.map((r) => allSpellsById[r.id])
+          // first, check mana cost
+          const manaCosts = spells.filter((s) => s.ManaCost > 0)
+          if (manaCosts.length === 1) {
+            // bingo! we have our spell
             console.info(
-              spell.name,
-              spell.id,
-              "has been removed due to not having a rank"
+              manaCosts[0].Name_Lang_enUS,
+              manaCosts[0].NameSubtext_Lang_enUS,
+              "should have id",
+              manaCosts[0].ID
             )
+
+            excludeDueToDuplicateRank = spell.id !== manaCosts[0].ID
           }
+        } else {
+          console.info(
+            spell.name,
+            spell.id,
+            "has been removed due to not having a rank"
+          )
         }
 
         spellCopy.shouldBeExcluded = excludeDueToDuplicateRank // || excludeDueToRanks
