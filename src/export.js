@@ -179,6 +179,8 @@ const start = (classNames, extractDbc) => {
       })
       .filter((spell) => spell)
       .filter((spell) => spell.level > 0)
+      .filter((spell) => !spell.name.startsWith("[Deprecated]"))
+      .filter((spell) => !spell.name.startsWith("zzz"))
 
     const cleanedClassSpells = allClassSpells
       .map((spell) => {

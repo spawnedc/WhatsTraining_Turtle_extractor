@@ -24,13 +24,19 @@ const SERVER_HIDDEN_SPELLS = {
     12494, // Frostbite
     12355, // Impact,
     12484, // Chilled Rank 1
+    12485, // Chilled Rank 2
+    12486, // Chilled Rank 3
+    604, // Dampen Magic
+    8450, // Dampen Magic
+    1008, // Amplify Magic
+    8455, // Amplify Magic
   ],
   PALADIN: [],
-  PRIEST: [
-    // 23455, // Holy Nova Rank 1
-  ],
+  PRIEST: [],
   ROGUE: [],
-  SHAMAN: [],
+  SHAMAN: [
+    48021, // Parry
+  ],
   WARLOCK: [],
   WARRIOR: [],
 }
