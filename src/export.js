@@ -234,7 +234,6 @@ const start = (classNames, extractDbc) => {
         "Has all ranks in order:",
         logEmojiStatus(hasAllRankSeries)
       )
-      console.info("=", "Ordered ranks:", rankNums)
       console.info("============================================")
 
       if (hasMixedRanks) {

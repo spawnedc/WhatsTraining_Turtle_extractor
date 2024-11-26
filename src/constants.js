@@ -33,6 +33,7 @@ const SERVER_HIDDEN_SPELLS = {
   ],
   PALADIN: [
     21084, // Seal of Righteousness Rank 1 - duplicate
+    25997, // Eye for an Eye Rank 1
   ],
   PRIEST: [],
   ROGUE: [],
