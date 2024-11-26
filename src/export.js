@@ -12,7 +12,7 @@ const {
   SERVER_HIDDEN_SPELLS,
 } = require("./constants")
 const getInitialData = require("./utils/getInitialData")
-const getObjectDiff = require("./utils/getdiff")
+const logEmojiStatus = require("./utils/logEmojiStatus")
 
 const hiddenSpellAttributes = [
   SPELL_ATTRIBUTES.SPELL_ATTR0_DO_NOT_DISPLAY_SPELLBOOK_AURA_ICON_COMBAT_LOG,
@@ -182,7 +182,82 @@ const start = (classNames, extractDbc) => {
       .filter((spell) => !spell.name.startsWith("[Deprecated]"))
       .filter((spell) => !spell.name.startsWith("zzz"))
 
-    const cleanedClassSpells = allClassSpells
+    const groupedSpells = Object.groupBy(allClassSpells, (s) => s.name)
+
+    writeFileSync(
+      path.join(
+        BASE_DIR,
+        SRC_DIR,
+        CLASSES_DIR,
+        `${cls.fileName}-by-spell.json`
+      ),
+      JSON.stringify(groupedSpells, undefined, 2)
+    )
+
+    const cleanGroupedSpells = {}
+
+    Object.entries(groupedSpells).forEach(([spellName, ranks]) => {
+      const sortedRanks = [...ranks]
+      sortedRanks.sort((a, b) => a.rank - b.rank)
+
+      const rankNums = sortedRanks.map((r) => r.rank)
+      // Let's see if there are duplicate ranks
+      const uniqueRanks = Array.from(new Set(rankNums))
+      const hasDuplicateRanks = uniqueRanks.length !== ranks.length
+
+      // Check if we have a mix of ranks and non-ranks
+      const nonRanks = sortedRanks.filter((r) => r.rank === 0)
+      const withRanks = sortedRanks.filter((r) => r.rank !== 0)
+
+      const hasNonRanks = nonRanks.length > 0
+      const hasRanks = withRanks.length > 0
+      const hasMixedRanks = hasNonRanks && hasRanks
+
+      const hasAllRankSeries = rankNums.every(
+        (rankNum, index) => rankNum === index + 1
+      )
+
+      console.info("============================================")
+      console.info("=", spellName)
+      console.info("--------------------------------------------")
+      console.info("=", "# of Ranks:", sortedRanks.length)
+      console.info("=", "Non-Ranks:", nonRanks.length)
+      console.info("=", "With-Ranks:", withRanks.length)
+      console.info(
+        "=",
+        "Has no duplicate ranks:",
+        logEmojiStatus(!hasDuplicateRanks)
+      )
+      console.info("=", "Has no mixed ranks:", logEmojiStatus(!hasMixedRanks))
+      console.info(
+        "=",
+        "Has all ranks in order:",
+        logEmojiStatus(hasAllRankSeries)
+      )
+      console.info("=", "Ordered ranks:", rankNums)
+      console.info("============================================")
+
+      if (hasMixedRanks) {
+        // Remove non-ranks from a mixed rank list
+        cleanGroupedSpells[spellName] = withRanks
+      } else {
+        cleanGroupedSpells[spellName] = sortedRanks
+      }
+    })
+
+    writeFileSync(
+      path.join(
+        BASE_DIR,
+        SRC_DIR,
+        CLASSES_DIR,
+        `${cls.fileName}-by-spell-clean.json`
+      ),
+      JSON.stringify(cleanGroupedSpells, undefined, 2)
+    )
+
+    const allClassSpellRanks = Object.values(cleanGroupedSpells).flat()
+
+    const cleanedClassSpells = allClassSpellRanks
       .map((spell) => {
         const ranks = getSpellRanks(allClassSpells, spell.name, true)
         const spellCopy = { ...spell }

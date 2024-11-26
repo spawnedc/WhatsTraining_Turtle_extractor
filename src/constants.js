@@ -31,7 +31,9 @@ const SERVER_HIDDEN_SPELLS = {
     1008, // Amplify Magic
     8455, // Amplify Magic
   ],
-  PALADIN: [],
+  PALADIN: [
+    21084, // Seal of Righteousness Rank 1 - duplicate
+  ],
   PRIEST: [],
   ROGUE: [],
   SHAMAN: [
