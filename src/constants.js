@@ -19,7 +19,17 @@ const SPELL_ATTRIBUTES = {
  */
 const SERVER_HIDDEN_SPELLS = {
   DRUID: [],
-  HUNTER: [],
+  HUNTER: [
+    45651, // Aspect of the Fox
+    45652, // Aspect of the Snake
+    45650, // Aspect of the Wolf Rank 1
+    51496, // Aspect of the Wolf Rank 2
+    51497, // Aspect of the Wolf Rank 3
+    51498, // Aspect of the Wolf Rank 4
+    51499, // Aspect of the Wolf Rank 5
+    51500, // Aspect of the Wolf Rank 6
+    51501, // Aspect of the Wolf Rank 7
+  ],
   MAGE: [
     12494, // Frostbite
     12355, // Impact,
