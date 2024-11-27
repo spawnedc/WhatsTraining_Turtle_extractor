@@ -178,9 +178,13 @@ const start = (classNames, extractDbc) => {
         return newSpell
       })
       .filter((spell) => spell)
-      .filter((spell) => spell.level > 0)
-      .filter((spell) => !spell.name.startsWith("[Deprecated]"))
-      .filter((spell) => !spell.name.startsWith("zzz"))
+      .filter(
+        (spell, index, spells) =>
+          spell.level > 0 &&
+          !spell.name.startsWith("[Deprecated]") &&
+          !spell.name.startsWith("zzz") &&
+          spells.findIndex((spl) => spl.id === spell.id) === index
+      )
 
     const groupedSpells = Object.groupBy(allClassSpells, (s) => s.name)
 
