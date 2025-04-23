@@ -40,8 +40,7 @@ const extractMPQ = async (dataDir, dbcFile, filesToExport, exportDir) => {
 
   console.info("Extracting from", dbcFile, "...")
   execSync(command.join(" \\\n\t"))
+  console.info("Extracted all files to", exportDir)
 }
 
-const [, , dataDir, dbcFile, filesToExport, exportDir] = process.argv
-
-extractMPQ(dataDir, dbcFile, filesToExport, exportDir)
+export default extractMPQ
