@@ -6,14 +6,10 @@
   "type": "module",
   "scripts": {
     "start": "node src/index.js",
-    "export": "node src/export.js",
-    "convertToLua": "node src/convertToLua.js",
-    "test": "node src/test.js"
+    "extract": "node src/extract.js"
   },
   "author": "spawnedc",
   "dependencies": {
-    "commander": "^7.2.0",
-    "inquirer": "^8.0.0",
     "json_to_lua": "^1.1.1"
   }
 }
