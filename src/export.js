@@ -212,6 +212,8 @@ const extractClassData = async () => {
 
         hasRaceMask = hasRaceMask || !!races
 
+        const skillLine = skillLinesById[sla.SkillLine]
+
         const newSpell = {
           id: spell.ID,
           name: spell.Name,
@@ -222,6 +224,7 @@ const extractClassData = async () => {
           requiredTalent: isTaughtByTalent
             ? { id: isTaughtByTalent.id, tabIndex: isTaughtByTalent.tabIndex }
             : undefined,
+          school: skillLine.DisplayName,
         }
 
         return newSpell
