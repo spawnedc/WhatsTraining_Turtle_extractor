@@ -1,0 +1,150 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Name",
+    "type": "loc"
+  },
+  {
+    "name": "ItemID_1",
+    "type": "int"
+  },
+  {
+    "name": "ItemID_2",
+    "type": "int"
+  },
+  {
+    "name": "ItemID_3",
+    "type": "int"
+  },
+  {
+    "name": "ItemID_4",
+    "type": "int"
+  },
+  {
+    "name": "ItemID_5",
+    "type": "int"
+  },
+  {
+    "name": "ItemID_6",
+    "type": "int"
+  },
+  {
+    "name": "ItemID_7",
+    "type": "int"
+  },
+  {
+    "name": "ItemID_8",
+    "type": "int"
+  },
+  {
+    "name": "ItemID_9",
+    "type": "int"
+  },
+  {
+    "name": "ItemID_10",
+    "type": "int"
+  },
+  {
+    "name": "BankItemID_1",
+    "type": "int"
+  },
+  {
+    "name": "BankItemID_2",
+    "type": "int"
+  },
+  {
+    "name": "BankItemID_3",
+    "type": "int"
+  },
+  {
+    "name": "BankItemID_4",
+    "type": "int"
+  },
+  {
+    "name": "BankItemID_5",
+    "type": "int"
+  },
+  {
+    "name": "BankItemID_6",
+    "type": "int"
+  },
+  {
+    "name": "BankItemID_7",
+    "type": "int"
+  },
+  {
+    "name": "SetSpellID_1",
+    "type": "int"
+  },
+  {
+    "name": "SetSpellID_2",
+    "type": "int"
+  },
+  {
+    "name": "SetSpellID_3",
+    "type": "int"
+  },
+  {
+    "name": "SetSpellID_4",
+    "type": "int"
+  },
+  {
+    "name": "SetSpellID_5",
+    "type": "int"
+  },
+  {
+    "name": "SetSpellID_6",
+    "type": "int"
+  },
+  {
+    "name": "SetSpellID_7",
+    "type": "int"
+  },
+  {
+    "name": "SetSpellID_8",
+    "type": "int"
+  },
+  {
+    "name": "SetThreshold_1",
+    "type": "int"
+  },
+  {
+    "name": "SetThreshold_2",
+    "type": "int"
+  },
+  {
+    "name": "SetThreshold_3",
+    "type": "int"
+  },
+  {
+    "name": "SetThreshold_4",
+    "type": "int"
+  },
+  {
+    "name": "SetThreshold_5",
+    "type": "int"
+  },
+  {
+    "name": "SetThreshold_6",
+    "type": "int"
+  },
+  {
+    "name": "SetThreshold_7",
+    "type": "int"
+  },
+  {
+    "name": "SetThreshold_8",
+    "type": "int"
+  },
+  {
+    "name": "RequiredSkill",
+    "type": "int"
+  },
+  {
+    "name": "RequiredSkillRank",
+    "type": "int"
+  }
+]

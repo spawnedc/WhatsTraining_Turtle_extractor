@@ -1,0 +1,30 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Name",
+    "type": "string"
+  },
+  {
+    "name": "WeaponFlags",
+    "type": "int"
+  },
+  {
+    "name": "BodyFlags",
+    "type": "int"
+  },
+  {
+    "name": "Flags",
+    "type": "int"
+  },
+  {
+    "name": "Fallback",
+    "type": "int"
+  },
+  {
+    "name": "BehaviourID",
+    "type": "int"
+  }
+]

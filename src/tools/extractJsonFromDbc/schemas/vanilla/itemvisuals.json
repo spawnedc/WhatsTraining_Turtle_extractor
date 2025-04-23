@@ -1,0 +1,26 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Slot_1",
+    "type": "int"
+  },
+  {
+    "name": "Slot_2",
+    "type": "int"
+  },
+  {
+    "name": "Slot_3",
+    "type": "int"
+  },
+  {
+    "name": "Slot_4",
+    "type": "int"
+  },
+  {
+    "name": "Slot_5",
+    "type": "int"
+  }
+]

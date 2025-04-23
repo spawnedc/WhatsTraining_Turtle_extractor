@@ -1,0 +1,26 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Name",
+    "type": "loc"
+  },
+  {
+    "name": "HardLevelMin",
+    "type": "int"
+  },
+  {
+    "name": "HardLevelMax",
+    "type": "int"
+  },
+  {
+    "name": "InstanceType",
+    "type": "int"
+  },
+  {
+    "name": "Faction",
+    "type": "int"
+  }
+]

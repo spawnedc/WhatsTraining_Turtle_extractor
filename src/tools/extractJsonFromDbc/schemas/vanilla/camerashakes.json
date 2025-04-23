@@ -1,0 +1,34 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "ShakeType",
+    "type": "int"
+  },
+  {
+    "name": "Direction",
+    "type": "int"
+  },
+  {
+    "name": "Amplitude",
+    "type": "float"
+  },
+  {
+    "name": "Frequency",
+    "type": "float"
+  },
+  {
+    "name": "Duration",
+    "type": "float"
+  },
+  {
+    "name": "Phase",
+    "type": "float"
+  },
+  {
+    "name": "Coefficient",
+    "type": "float"
+  }
+]

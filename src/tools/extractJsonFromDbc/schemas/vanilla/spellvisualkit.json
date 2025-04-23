@@ -1,0 +1,142 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "StartAnimID",
+    "type": "int"
+  },
+  {
+    "name": "AnimID",
+    "type": "int"
+  },
+  {
+    "name": "AnimKitID",
+    "type": "int"
+  },
+  {
+    "name": "HeadEffect",
+    "type": "int"
+  },
+  {
+    "name": "ChestEffect",
+    "type": "int"
+  },
+  {
+    "name": "BaseEffect",
+    "type": "int"
+  },
+  {
+    "name": "LeftHandEffect",
+    "type": "int"
+  },
+  {
+    "name": "RightHandEffect",
+    "type": "int"
+  },
+  {
+    "name": "BreathEffect",
+    "type": "int"
+  },
+  {
+    "name": "LeftWeaponEffect",
+    "type": "int"
+  },
+  {
+    "name": "RightWeaponEffect",
+    "type": "int"
+  },
+  {
+    "name": "SpecialEffect_1",
+    "type": "int"
+  },
+  {
+    "name": "SpecialEffect_2",
+    "type": "int"
+  },
+  {
+    "name": "SpecialEffect_3",
+    "type": "int"
+  },
+  {
+    "name": "WorldEffect",
+    "type": "int"
+  },
+  {
+    "name": "SoundID",
+    "type": "int"
+  },
+  {
+    "name": "ShakeID",
+    "type": "int"
+  },
+  {
+    "name": "CharProc_1",
+    "type": "int"
+  },
+  {
+    "name": "CharProc_2",
+    "type": "int"
+  },
+  {
+    "name": "CharProc_3",
+    "type": "int"
+  },
+  {
+    "name": "CharProc_4",
+    "type": "int"
+  },
+  {
+    "name": "CharParamZero_1",
+    "type": "float"
+  },
+  {
+    "name": "CharParamZero_2",
+    "type": "float"
+  },
+  {
+    "name": "CharParamZero_3",
+    "type": "float"
+  },
+  {
+    "name": "CharParamZero_4",
+    "type": "float"
+  },
+  {
+    "name": "CharParamOne_1",
+    "type": "float"
+  },
+  {
+    "name": "CharParamOne_2",
+    "type": "float"
+  },
+  {
+    "name": "CharParamOne_3",
+    "type": "float"
+  },
+  {
+    "name": "CharParamOne_4",
+    "type": "float"
+  },
+  {
+    "name": "CharParamTwo_1",
+    "type": "float"
+  },
+  {
+    "name": "CharParamTwo_2",
+    "type": "float"
+  },
+  {
+    "name": "CharParamTwo_3",
+    "type": "float"
+  },
+  {
+    "name": "CharParamTwo_4",
+    "type": "float"
+  },
+  {
+    "name": "Flags",
+    "type": "int"
+  }
+]

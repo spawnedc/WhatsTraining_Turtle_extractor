@@ -1,0 +1,14 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "ErrorName",
+    "type": "string"
+  },
+  {
+    "name": "ErrorString",
+    "type": "loc"
+  }
+]

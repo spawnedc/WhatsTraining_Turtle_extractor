@@ -1,0 +1,50 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "ModelID",
+    "type": "int"
+  },
+  {
+    "name": "SoundID",
+    "type": "int"
+  },
+  {
+    "name": "ExtendedDisplayInfoID",
+    "type": "int"
+  },
+  {
+    "name": "CreatureModelScale",
+    "type": "float"
+  },
+  {
+    "name": "CreatureModelAlpha",
+    "type": "int"
+  },
+  {
+    "name": "TextureVariation1",
+    "type": "string"
+  },
+  {
+    "name": "TextureVariation2",
+    "type": "string"
+  },
+  {
+    "name": "TextureVariation3",
+    "type": "string"
+  },
+  {
+    "name": "SizeClass",
+    "type": "int"
+  },
+  {
+    "name": "BloodID",
+    "type": "int"
+  },
+  {
+    "name": "NPCSoundID",
+    "type": "int"
+  }
+]

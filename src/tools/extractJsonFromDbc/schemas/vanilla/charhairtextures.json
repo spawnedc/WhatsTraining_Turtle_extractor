@@ -1,0 +1,34 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "RaceID",
+    "type": "int"
+  },
+  {
+    "name": "SexID",
+    "type": "int"
+  },
+  {
+    "name": "Field03",
+    "type": "int"
+  },
+  {
+    "name": "Field04",
+    "type": "int"
+  },
+  {
+    "name": "Field05",
+    "type": "int"
+  },
+  {
+    "name": "Field06",
+    "type": "int"
+  },
+  {
+    "name": "Field07",
+    "type": "int"
+  }
+]

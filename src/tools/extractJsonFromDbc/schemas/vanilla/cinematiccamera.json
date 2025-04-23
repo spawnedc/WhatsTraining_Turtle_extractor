@@ -1,0 +1,30 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Model",
+    "type": "string"
+  },
+  {
+    "name": "SoundID",
+    "type": "int"
+  },
+  {
+    "name": "OriginX",
+    "type": "float"
+  },
+  {
+    "name": "OriginY",
+    "type": "float"
+  },
+  {
+    "name": "OriginZ",
+    "type": "float"
+  },
+  {
+    "name": "OriginFacing",
+    "type": "float"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "AvgSegLen",
+    "type": "float"
+  },
+  {
+    "name": "Width",
+    "type": "float"
+  },
+  {
+    "name": "NoiseScale",
+    "type": "float"
+  },
+  {
+    "name": "TexCoordScale",
+    "type": "float"
+  },
+  {
+    "name": "SegDuration",
+    "type": "int"
+  },
+  {
+    "name": "SegDelay",
+    "type": "int"
+  },
+  {
+    "name": "Texture",
+    "type": "string"
+  }
+]

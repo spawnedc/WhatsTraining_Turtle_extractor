@@ -1,0 +1,30 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "ItemClass",
+    "type": "int"
+  },
+  {
+    "name": "ItemSubclass",
+    "type": "int"
+  },
+  {
+    "name": "ItemEnvTypes",
+    "type": "int"
+  },
+  {
+    "name": "IsShield",
+    "type": "int"
+  },
+  {
+    "name": "SheathSoundID",
+    "type": "int"
+  },
+  {
+    "name": "UnsheathSoundID",
+    "type": "int"
+  }
+]

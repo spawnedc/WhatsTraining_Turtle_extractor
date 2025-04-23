@@ -1,0 +1,38 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Field01",
+    "type": "int"
+  },
+  {
+    "name": "Field02",
+    "type": "int"
+  },
+  {
+    "name": "PowerType",
+    "type": "int"
+  },
+  {
+    "name": "PetNameToken",
+    "type": "string"
+  },
+  {
+    "name": "Name",
+    "type": "loc"
+  },
+  {
+    "name": "FileName",
+    "type": "string"
+  },
+  {
+    "name": "Field07",
+    "type": "int"
+  },
+  {
+    "name": "Field08",
+    "type": "int"
+  }
+]

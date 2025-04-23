@@ -1,0 +1,70 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "ContinentID",
+    "type": "int"
+  },
+  {
+    "name": "ParentAreaID",
+    "type": "int"
+  },
+  {
+    "name": "AreaBit",
+    "type": "int"
+  },
+  {
+    "name": "Flags",
+    "type": "int"
+  },
+  {
+    "name": "SoundProviderPref",
+    "type": "int"
+  },
+  {
+    "name": "SoundProviderPrefUnderWater",
+    "type": "int"
+  },
+  {
+    "name": "AmbienceID",
+    "type": "int"
+  },
+  {
+    "name": "ZoneMusic",
+    "type": "int"
+  },
+  {
+    "name": "IntroSound",
+    "type": "int"
+  },
+  {
+    "name": "ExplorationLevel",
+    "type": "int"
+  },
+  {
+    "name": "AreaName",
+    "type": "loc"
+  },
+  {
+    "name": "FactionGroupMask",
+    "type": "int"
+  },
+  {
+    "name": "LiquidTypeID",
+    "type": "int"
+  },
+  {
+    "name": "MinElevation",
+    "type": "int"
+  },
+  {
+    "name": "AmbientMultiplier",
+    "type": "float"
+  },
+  {
+    "name": "LightID",
+    "type": "int"
+  }
+]

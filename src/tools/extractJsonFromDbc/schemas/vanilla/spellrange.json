@@ -1,0 +1,26 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "RangeMin",
+    "type": "float"
+  },
+  {
+    "name": "RangeMax",
+    "type": "float"
+  },
+  {
+    "name": "Flags",
+    "type": "int"
+  },
+  {
+    "name": "DisplayName",
+    "type": "loc"
+  },
+  {
+    "name": "DisplayNameShort",
+    "type": "loc"
+  }
+]

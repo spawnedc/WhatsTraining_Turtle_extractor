@@ -1,0 +1,50 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "SubClassID",
+    "type": "int"
+  },
+  {
+    "name": "PrerequisiteProficiency",
+    "type": "int"
+  },
+  {
+    "name": "PostrequisiteProficiency",
+    "type": "int"
+  },
+  {
+    "name": "Flags",
+    "type": "int"
+  },
+  {
+    "name": "DisplayFlags",
+    "type": "int"
+  },
+  {
+    "name": "WeaponParrySeq",
+    "type": "int"
+  },
+  {
+    "name": "WeaponReadySeq",
+    "type": "int"
+  },
+  {
+    "name": "WeaponAttackSeq",
+    "type": "int"
+  },
+  {
+    "name": "WeaponSwingSize",
+    "type": "int"
+  },
+  {
+    "name": "DisplayName",
+    "type": "loc"
+  },
+  {
+    "name": "VerboseName",
+    "type": "loc"
+  }
+]

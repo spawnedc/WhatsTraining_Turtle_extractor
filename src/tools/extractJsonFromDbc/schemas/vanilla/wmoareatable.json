@@ -1,0 +1,50 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "WMOID",
+    "type": "int"
+  },
+  {
+    "name": "NameSetID",
+    "type": "int"
+  },
+  {
+    "name": "WMOGroupID",
+    "type": "int"
+  },
+  {
+    "name": "SoundProviderPref",
+    "type": "int"
+  },
+  {
+    "name": "SoundProviderPrefUnderwater",
+    "type": "int"
+  },
+  {
+    "name": "AmbienceID",
+    "type": "int"
+  },
+  {
+    "name": "ZoneMusic",
+    "type": "int"
+  },
+  {
+    "name": "IntroSound",
+    "type": "int"
+  },
+  {
+    "name": "Flags",
+    "type": "uint"
+  },
+  {
+    "name": "AreaTableID",
+    "type": "int"
+  },
+  {
+    "name": "AreaName",
+    "type": "loc"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Continent",
+    "type": "int"
+  },
+  {
+    "name": "LocationX",
+    "type": "float"
+  },
+  {
+    "name": "LocationY",
+    "type": "float"
+  },
+  {
+    "name": "LocationZ",
+    "type": "float"
+  },
+  {
+    "name": "AreaName",
+    "type": "loc"
+  }
+]

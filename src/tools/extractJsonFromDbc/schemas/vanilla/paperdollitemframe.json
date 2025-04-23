@@ -1,0 +1,14 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "SlotIcon",
+    "type": "string"
+  },
+  {
+    "name": "SlotNumber",
+    "type": "int"
+  }
+]

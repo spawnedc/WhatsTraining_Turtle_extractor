@@ -1,0 +1,30 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Xp",
+    "type": "int"
+  },
+  {
+    "name": "Factor",
+    "type": "float"
+  },
+  {
+    "name": "OutdoorHours",
+    "type": "float"
+  },
+  {
+    "name": "InnHours",
+    "type": "float"
+  },
+  {
+    "name": "Name",
+    "type": "loc"
+  },
+  {
+    "name": "Threshold",
+    "type": "int"
+  }
+]

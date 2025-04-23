@@ -1,0 +1,14 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "LoadAnimation",
+    "type": "string"
+  },
+  {
+    "name": "HoldAnimation",
+    "type": "string"
+  }
+]

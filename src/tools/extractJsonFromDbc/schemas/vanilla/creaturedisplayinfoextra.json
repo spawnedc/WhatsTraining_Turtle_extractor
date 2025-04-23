@@ -1,0 +1,78 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "DisplayRaceID",
+    "type": "int"
+  },
+  {
+    "name": "DisplaySexID",
+    "type": "int"
+  },
+  {
+    "name": "SkinID",
+    "type": "int"
+  },
+  {
+    "name": "FaceID",
+    "type": "int"
+  },
+  {
+    "name": "HairStyleID",
+    "type": "int"
+  },
+  {
+    "name": "HairColorID",
+    "type": "int"
+  },
+  {
+    "name": "FacialHairID",
+    "type": "int"
+  },
+  {
+    "name": "NPCItemDisplayID_1",
+    "type": "int"
+  },
+  {
+    "name": "NPCItemDisplayID_2",
+    "type": "int"
+  },
+  {
+    "name": "NPCItemDisplayID_3",
+    "type": "int"
+  },
+  {
+    "name": "NPCItemDisplayID_4",
+    "type": "int"
+  },
+  {
+    "name": "NPCItemDisplayID_5",
+    "type": "int"
+  },
+  {
+    "name": "NPCItemDisplayID_6",
+    "type": "int"
+  },
+  {
+    "name": "NPCItemDisplayID_7",
+    "type": "int"
+  },
+  {
+    "name": "NPCItemDisplayID_8",
+    "type": "int"
+  },
+  {
+    "name": "NPCItemDisplayID_9",
+    "type": "int"
+  },
+  {
+    "name": "Flags",
+    "type": "int"
+  },
+  {
+    "name": "BakeName",
+    "type": "string"
+  }
+]

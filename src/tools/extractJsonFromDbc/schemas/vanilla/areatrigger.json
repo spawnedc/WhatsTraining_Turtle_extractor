@@ -1,0 +1,42 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "ContinentID",
+    "type": "int"
+  },
+  {
+    "name": "X",
+    "type": "float"
+  },
+  {
+    "name": "Y",
+    "type": "float"
+  },
+  {
+    "name": "Z",
+    "type": "float"
+  },
+  {
+    "name": "Radius",
+    "type": "float"
+  },
+  {
+    "name": "BoxLength",
+    "type": "int"
+  },
+  {
+    "name": "BoxWidth",
+    "type": "int"
+  },
+  {
+    "name": "BoxHeight",
+    "type": "int"
+  },
+  {
+    "name": "BoxYaw",
+    "type": "int"
+  }
+]

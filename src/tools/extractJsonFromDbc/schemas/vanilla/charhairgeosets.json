@@ -1,0 +1,26 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "RaceID",
+    "type": "int"
+  },
+  {
+    "name": "SexID",
+    "type": "int"
+  },
+  {
+    "name": "VariationID",
+    "type": "int"
+  },
+  {
+    "name": "GeosetID",
+    "type": "int"
+  },
+  {
+    "name": "Showscalp",
+    "type": "int"
+  }
+]

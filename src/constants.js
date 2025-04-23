@@ -1,12 +1,14 @@
-const path = require("path")
-const process = require("process")
+import { join } from "path"
+import { cwd } from "process"
 
-const BASE_DIR = process.cwd()
+const BASE_DIR = cwd()
 const SRC_DIR = "src"
 const BUILD_DIR = "build"
-const EXPORT_DIR = "exports"
-const CLASSES_DIR = path.join(EXPORT_DIR, "classes")
-const LUA_DIR = path.join(BASE_DIR, BUILD_DIR, "lua")
+const EXPORT_DIR = join(BASE_DIR, "exports")
+const DBC_DIR = join(EXPORT_DIR, "dbc")
+const JSON_DIR = join(EXPORT_DIR, "json")
+const CLASSES_DIR = join(EXPORT_DIR, "classes")
+const LUA_DIR = join(BASE_DIR, BUILD_DIR, "lua")
 
 const SPELL_ATTRIBUTES = {
   SPELL_ATTR0_DO_NOT_DISPLAY_SPELLBOOK_AURA_ICON_COMBAT_LOG: 8,
@@ -28,8 +30,10 @@ const SERVER_HIDDEN_SPELLS = [
   27805, // Priest: Holy Nova Rank 6
 ]
 
-module.exports = {
+export {
   BASE_DIR,
+  DBC_DIR,
+  JSON_DIR,
   SRC_DIR,
   BUILD_DIR,
   EXPORT_DIR,

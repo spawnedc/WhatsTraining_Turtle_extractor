@@ -1,0 +1,30 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "DoodadID_1",
+    "type": "int"
+  },
+  {
+    "name": "DoodadID_2",
+    "type": "int"
+  },
+  {
+    "name": "DoodadID_3",
+    "type": "int"
+  },
+  {
+    "name": "DoodadID_4",
+    "type": "int"
+  },
+  {
+    "name": "Density",
+    "type": "int"
+  },
+  {
+    "name": "Sound",
+    "type": "int"
+  }
+]

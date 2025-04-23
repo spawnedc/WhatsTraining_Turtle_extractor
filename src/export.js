@@ -1,15 +1,17 @@
-const { execSync } = require("child_process")
-const { writeFileSync } = require("fs")
-const path = require("path")
-const getIdsFromMask = require("./utils/getIdsFromMask")
-const {
+import { execSync } from "child_process"
+import { mkdirSync, existsSync, writeFileSync } from "fs"
+import { join } from "path"
+import getIdsFromMask from "./utils/getIdsFromMask.js"
+import {
   BASE_DIR,
   SRC_DIR,
-  EXPORT_DIR,
   CLASSES_DIR,
   SPELL_ATTRIBUTES,
   SERVER_HIDDEN_SPELLS,
-} = require("./constants")
+  DBC_DIR,
+  JSON_DIR,
+} from "./constants.js"
+import convertDbcToJson from "./tools/extractJsonFromDbc/index.js"
 
 const hiddenSpellAttributes = [
   SPELL_ATTRIBUTES.SPELL_ATTR0_DO_NOT_DISPLAY_SPELLBOOK_AURA_ICON_COMBAT_LOG,
@@ -18,7 +20,7 @@ const hiddenSpellAttributes = [
 
 const EXTRACT_DBC = process.argv[2] === "true"
 
-execSync(`mkdir -p ${path.join(BASE_DIR, SRC_DIR, CLASSES_DIR)}`)
+execSync(`mkdir -p ${join(BASE_DIR, SRC_DIR, CLASSES_DIR)}`)
 
 const arrayToObject = (array, keyField) =>
   array.reduce((obj, item) => {
@@ -26,54 +28,75 @@ const arrayToObject = (array, keyField) =>
     return obj
   }, {})
 
-const extractFile = (dbName) => {
-  const moduleFile = `${path.join(EXPORT_DIR, dbName)}.json`
+const extractFile = async (dbName) => {
+  const moduleFile = `${join(JSON_DIR, dbName)}.json`
   if (EXTRACT_DBC) {
     console.info("Extracting", dbName, "as", moduleFile, "...")
-    execSync(
-      `npm run start -- ${dbName} --file=${path.join(
-        BASE_DIR,
-        SRC_DIR,
-        moduleFile
-      )}`
-    )
+
+    await convertDbcToJson([dbName], {
+      dbcPath: DBC_DIR,
+      outDir: JSON_DIR,
+    })
+
+    // execSync(
+    //   `npm run start -- ${dbName} --file=${join(BASE_DIR, SRC_DIR, moduleFile)}`
+    // )
   }
-  return `./${moduleFile}`
+  return moduleFile
 }
 
-const FILE_SKILL_RACE_CLASS_INFO = extractFile("SkillRaceClassInfo")
-const FILE_CLASSES = extractFile("ChrClasses")
-const FILE_RACES = extractFile("ChrRaces")
-const FILE_ALL_SPELLS = extractFile("Spell")
-const FILE_SKILL_LINES = extractFile("SkillLine")
-const FILE_SKILL_LINE_ABILITIES = extractFile("SkillLineAbility")
-const FILE_SPELL_ICONS = extractFile("SpellIcon")
-const FILE_TALENT_TABS = extractFile("TalentTab")
-const FILE_TALENTS = extractFile("Talent")
+const FILE_SKILL_RACE_CLASS_INFO = await extractFile("SkillRaceClassInfo")
+const FILE_CLASSES = await extractFile("ChrClasses")
+const FILE_RACES = await extractFile("ChrRaces")
+const FILE_ALL_SPELLS = await extractFile("Spell")
+const FILE_SKILL_LINES = await extractFile("SkillLine")
+const FILE_SKILL_LINE_ABILITIES = await extractFile("SkillLineAbility")
+const FILE_SPELL_ICONS = await extractFile("SpellIcon")
+const FILE_TALENT_TABS = await extractFile("TalentTab")
+const FILE_TALENTS = await extractFile("Talent")
 
-const skillRaceClassInfo = require(FILE_SKILL_RACE_CLASS_INFO)
-const talentTabs = require(FILE_TALENT_TABS)
-const talents = require(FILE_TALENTS)
-const classes = require(FILE_CLASSES)
-const races = require(FILE_RACES)
+const { default: skillRaceClassInfo } = await import(
+  FILE_SKILL_RACE_CLASS_INFO,
+  { with: { type: "json" } }
+)
+const { default: talentTabs } = await import(FILE_TALENT_TABS, {
+  with: { type: "json" },
+})
+const { default: talents } = await import(FILE_TALENTS, {
+  with: { type: "json" },
+})
+const { default: classes } = await import(FILE_CLASSES, {
+  with: { type: "json" },
+})
+const { default: races } = await import(FILE_RACES, { with: { type: "json" } })
+
 const racesById = arrayToObject(races, "ID")
 
 const allClasses = classes.map((cls) => ({
-  name: cls.Name_Lang_enUS,
-  fileName: cls.Filename,
+  name: cls.Name,
+  fileName: cls.Filename || cls.Name,
   classSet: cls.SpellClassSet,
   classMask: Math.pow(2, cls.ID - 1),
 }))
 
-const allSpells = require(FILE_ALL_SPELLS)
+const { default: allSpells } = await import(FILE_ALL_SPELLS, {
+  with: { type: "json" },
+})
 const allSpellsById = arrayToObject(allSpells, "ID")
 
-const spellIcons = require(FILE_SPELL_ICONS)
+const { default: spellIcons } = await import(FILE_SPELL_ICONS, {
+  with: { type: "json" },
+})
 const spellIconsById = arrayToObject(spellIcons, "ID")
 
-const skillLines = require(FILE_SKILL_LINES)
+const { default: skillLines } = await import(FILE_SKILL_LINES, {
+  with: { type: "json" },
+})
 const skillLinesById = arrayToObject(skillLines, "ID")
-const skillLineAbilities = require(FILE_SKILL_LINE_ABILITIES)
+const { default: skillLineAbilities } = await import(
+  FILE_SKILL_LINE_ABILITIES,
+  { with: { type: "json" } }
+)
 const skillLineAbilitiesBySpellId = arrayToObject(skillLineAbilities, "Spell")
 
 const getSpellRanks = (spells, spellName, nameField, subTextField) =>
@@ -167,6 +190,9 @@ allClasses.forEach((cls) => {
   const allClassSpells = classSkillLineAbilities
     .map((sla) => {
       const spell = allSpellsById[sla.Spell]
+      if (!spell) {
+        return undefined
+      }
       const spellAttributes =
         spell.Attributes !== 0 ? getIdsFromMask(spell.Attributes) : []
       if (
@@ -181,7 +207,7 @@ allClasses.forEach((cls) => {
         sla.RaceMask !== 0
           ? getIdsFromMask(sla.RaceMask).map(
               // UnitRace("player") returns the name, not the ID
-              (raceId) => racesById[raceId].Name_Lang_enUS
+              (raceId) => racesById[raceId].Name
             )
           : undefined
       const isTaughtByTalent = classTalentSpells.find(
@@ -192,8 +218,8 @@ allClasses.forEach((cls) => {
 
       const newSpell = {
         id: spell.ID,
-        name: spell.Name_Lang_enUS,
-        subText: spell.NameSubtext_Lang_enUS,
+        name: spell.Name,
+        subText: spell.NameSubtext,
         level: isTaughtByTalent?.level || spell.BaseLevel,
         icon: spellIconsById[spell.SpellIconID].TextureFilename,
         races: races?.length > 0 ? races : undefined,
@@ -257,8 +283,12 @@ allClasses.forEach((cls) => {
     spellsByLevel,
   }
 
+  if (!existsSync(CLASSES_DIR)) {
+    mkdirSync(CLASSES_DIR, { recursive: true })
+  }
+
   writeFileSync(
-    path.join(BASE_DIR, SRC_DIR, CLASSES_DIR, `${cls.fileName}.json`),
+    join(CLASSES_DIR, `${cls.fileName}.json`),
     JSON.stringify(classData, undefined, 2)
   )
 })

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Group",
+    "type": "int"
+  },
+  {
+    "name": "Name",
+    "type": "loc"
+  }
+]

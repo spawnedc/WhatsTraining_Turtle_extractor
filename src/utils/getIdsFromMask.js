@@ -39,4 +39,4 @@ const getIdsFromMask2 = (mask, verbose = false) => {
   return maskIndexes
 }
 
-module.exports = getIdsFromMask2
+export default getIdsFromMask2

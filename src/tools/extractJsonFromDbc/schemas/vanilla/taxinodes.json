@@ -1,0 +1,34 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "ContinentID",
+    "type": "int"
+  },
+  {
+    "name": "X",
+    "type": "float"
+  },
+  {
+    "name": "Y",
+    "type": "float"
+  },
+  {
+    "name": "Z",
+    "type": "float"
+  },
+  {
+    "name": "Name",
+    "type": "loc"
+  },
+  {
+    "name": "MountCreatureID_1",
+    "type": "int"
+  },
+  {
+    "name": "MountCreatureID_2",
+    "type": "int"
+  }
+]

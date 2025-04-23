@@ -1,0 +1,26 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "HideGeoset_1",
+    "type": "int"
+  },
+  {
+    "name": "HideGeoset_2",
+    "type": "int"
+  },
+  {
+    "name": "HideGeoset_3",
+    "type": "int"
+  },
+  {
+    "name": "HideGeoset_4",
+    "type": "int"
+  },
+  {
+    "name": "HideGeoset_5",
+    "type": "int"
+  }
+]

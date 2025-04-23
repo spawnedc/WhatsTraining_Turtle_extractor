@@ -1,0 +1,54 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Importance",
+    "type": "int"
+  },
+  {
+    "name": "Icon",
+    "type": "int"
+  },
+  {
+    "name": "FactionID",
+    "type": "int"
+  },
+  {
+    "name": "X",
+    "type": "float"
+  },
+  {
+    "name": "Y",
+    "type": "float"
+  },
+  {
+    "name": "Z",
+    "type": "float"
+  },
+  {
+    "name": "ContinentID",
+    "type": "int"
+  },
+  {
+    "name": "Flags",
+    "type": "int"
+  },
+  {
+    "name": "AreaID",
+    "type": "int"
+  },
+  {
+    "name": "Name",
+    "type": "loc"
+  },
+  {
+    "name": "Description",
+    "type": "loc"
+  },
+  {
+    "name": "WorldStateID",
+    "type": "int"
+  }
+]
