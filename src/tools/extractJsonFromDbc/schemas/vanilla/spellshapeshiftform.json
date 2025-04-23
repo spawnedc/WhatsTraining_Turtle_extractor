@@ -1,0 +1,26 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "BonusActionBar",
+    "type": "int"
+  },
+  {
+    "name": "Name",
+    "type": "loc"
+  },
+  {
+    "name": "Flags",
+    "type": "int"
+  },
+  {
+    "name": "CreatureType",
+    "type": "int"
+  },
+  {
+    "name": "CombatRoundTime",
+    "type": "int"
+  }
+]

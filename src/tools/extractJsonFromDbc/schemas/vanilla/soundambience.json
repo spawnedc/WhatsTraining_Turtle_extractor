@@ -1,0 +1,14 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "AmbienceID_1",
+    "type": "int"
+  },
+  {
+    "name": "AmbienceID_2",
+    "type": "int"
+  }
+]

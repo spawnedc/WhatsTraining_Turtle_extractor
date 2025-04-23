@@ -1,0 +1,42 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "MinScale",
+    "type": "float"
+  },
+  {
+    "name": "MinScaleLevel",
+    "type": "int"
+  },
+  {
+    "name": "MaxScale",
+    "type": "float"
+  },
+  {
+    "name": "MaxScaleLevel",
+    "type": "int"
+  },
+  {
+    "name": "PetFoodMask",
+    "type": "int"
+  },
+  {
+    "name": "PetTalentType",
+    "type": "int"
+  },
+  {
+    "name": "CategoryEnumID",
+    "type": "int"
+  },
+  {
+    "name": "Name",
+    "type": "loc"
+  },
+  {
+    "name": "IconFile",
+    "type": "string"
+  }
+]

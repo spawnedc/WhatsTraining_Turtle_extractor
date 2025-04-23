@@ -1,0 +1,74 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Directory",
+    "type": "string"
+  },
+  {
+    "name": "InstanceType",
+    "type": "int"
+  },
+  {
+    "name": "PVP",
+    "type": "int"
+  },
+  {
+    "name": "MapName",
+    "type": "loc"
+  },
+  {
+    "name": "MinLevel",
+    "type": "int"
+  },
+  {
+    "name": "MaxLevel",
+    "type": "int"
+  },
+  {
+    "name": "MaxPlayers",
+    "type": "int"
+  },
+  {
+    "name": "Field08",
+    "type": "int"
+  },
+  {
+    "name": "Field09",
+    "type": "int"
+  },
+  {
+    "name": "Field10",
+    "type": "int"
+  },
+  {
+    "name": "AreaTableID",
+    "type": "int"
+  },
+  {
+    "name": "MapDescription0",
+    "type": "loc"
+  },
+  {
+    "name": "MapDescription1",
+    "type": "loc"
+  },
+  {
+    "name": "LoadingScreenID",
+    "type": "int"
+  },
+  {
+    "name": "RaidOffset",
+    "type": "int"
+  },
+  {
+    "name": "Field16",
+    "type": "int"
+  },
+  {
+    "name": "Field17",
+    "type": "int"
+  }
+]

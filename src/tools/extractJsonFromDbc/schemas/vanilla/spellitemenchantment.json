@@ -1,0 +1,66 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "EnchantmentType_1",
+    "type": "int"
+  },
+  {
+    "name": "EnchantmentType_2",
+    "type": "int"
+  },
+  {
+    "name": "EnchantmentType_3",
+    "type": "int"
+  },
+  {
+    "name": "EffectPointsMin_1",
+    "type": "int"
+  },
+  {
+    "name": "EffectPointsMin_2",
+    "type": "int"
+  },
+  {
+    "name": "EffectPointsMin_3",
+    "type": "int"
+  },
+  {
+    "name": "EffectPointsMax_1",
+    "type": "int"
+  },
+  {
+    "name": "EffectPointsMax_2",
+    "type": "int"
+  },
+  {
+    "name": "EffectPointsMax_3",
+    "type": "int"
+  },
+  {
+    "name": "EffectArg_1",
+    "type": "int"
+  },
+  {
+    "name": "EffectArg_2",
+    "type": "int"
+  },
+  {
+    "name": "EffectArg_3",
+    "type": "int"
+  },
+  {
+    "name": "Name",
+    "type": "loc"
+  },
+  {
+    "name": "ItemVisual",
+    "type": "int"
+  },
+  {
+    "name": "Flags",
+    "type": "int"
+  }
+]

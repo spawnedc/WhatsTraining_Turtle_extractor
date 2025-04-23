@@ -1,0 +1,166 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "RaceID",
+    "type": "byte"
+  },
+  {
+    "name": "ClassID",
+    "type": "byte"
+  },
+  {
+    "name": "SexID",
+    "type": "byte"
+  },
+  {
+    "name": "OutfitID",
+    "type": "byte"
+  },
+  {
+    "name": "ItemID_1",
+    "type": "int"
+  },
+  {
+    "name": "ItemID_2",
+    "type": "int"
+  },
+  {
+    "name": "ItemID_3",
+    "type": "int"
+  },
+  {
+    "name": "ItemID_4",
+    "type": "int"
+  },
+  {
+    "name": "ItemID_5",
+    "type": "int"
+  },
+  {
+    "name": "ItemID_6",
+    "type": "int"
+  },
+  {
+    "name": "ItemID_7",
+    "type": "int"
+  },
+  {
+    "name": "ItemID_8",
+    "type": "int"
+  },
+  {
+    "name": "ItemID_9",
+    "type": "int"
+  },
+  {
+    "name": "ItemID_10",
+    "type": "int"
+  },
+  {
+    "name": "ItemID_11",
+    "type": "int"
+  },
+  {
+    "name": "ItemID_12",
+    "type": "int"
+  },
+  {
+    "name": "DisplayItemID_1",
+    "type": "int"
+  },
+  {
+    "name": "DisplayItemID_2",
+    "type": "int"
+  },
+  {
+    "name": "DisplayItemID_3",
+    "type": "int"
+  },
+  {
+    "name": "DisplayItemID_4",
+    "type": "int"
+  },
+  {
+    "name": "DisplayItemID_5",
+    "type": "int"
+  },
+  {
+    "name": "DisplayItemID_6",
+    "type": "int"
+  },
+  {
+    "name": "DisplayItemID_7",
+    "type": "int"
+  },
+  {
+    "name": "DisplayItemID_8",
+    "type": "int"
+  },
+  {
+    "name": "DisplayItemID_9",
+    "type": "int"
+  },
+  {
+    "name": "DisplayItemID_10",
+    "type": "int"
+  },
+  {
+    "name": "DisplayItemID_11",
+    "type": "int"
+  },
+  {
+    "name": "DisplayItemID_12",
+    "type": "int"
+  },
+  {
+    "name": "InventoryType_1",
+    "type": "int"
+  },
+  {
+    "name": "InventoryType_2",
+    "type": "int"
+  },
+  {
+    "name": "InventoryType_3",
+    "type": "int"
+  },
+  {
+    "name": "InventoryType_4",
+    "type": "int"
+  },
+  {
+    "name": "InventoryType_5",
+    "type": "int"
+  },
+  {
+    "name": "InventoryType_6",
+    "type": "int"
+  },
+  {
+    "name": "InventoryType_7",
+    "type": "int"
+  },
+  {
+    "name": "InventoryType_8",
+    "type": "int"
+  },
+  {
+    "name": "InventoryType_9",
+    "type": "int"
+  },
+  {
+    "name": "InventoryType_10",
+    "type": "int"
+  },
+  {
+    "name": "InventoryType_11",
+    "type": "int"
+  },
+  {
+    "name": "InventoryType_12",
+    "type": "int"
+  }
+]

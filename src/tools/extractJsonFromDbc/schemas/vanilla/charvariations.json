@@ -1,0 +1,26 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "SexID",
+    "type": "int"
+  },
+  {
+    "name": "Field02",
+    "type": "int"
+  },
+  {
+    "name": "Mask1",
+    "type": "int"
+  },
+  {
+    "name": "Mask2",
+    "type": "int"
+  },
+  {
+    "name": "Field05",
+    "type": "int"
+  }
+]

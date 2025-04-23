@@ -1,0 +1,22 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "AnimationID",
+    "type": "int"
+  },
+  {
+    "name": "AttackTypeID",
+    "type": "int"
+  },
+  {
+    "name": "Flags",
+    "type": "int"
+  },
+  {
+    "name": "Field04",
+    "type": "int"
+  }
+]

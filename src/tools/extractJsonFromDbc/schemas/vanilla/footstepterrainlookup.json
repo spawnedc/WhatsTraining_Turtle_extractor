@@ -1,0 +1,22 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "CreatureFootstepID",
+    "type": "int"
+  },
+  {
+    "name": "TerrainSoundID",
+    "type": "int"
+  },
+  {
+    "name": "SoundID",
+    "type": "int"
+  },
+  {
+    "name": "SoundIDSplash",
+    "type": "int"
+  }
+]

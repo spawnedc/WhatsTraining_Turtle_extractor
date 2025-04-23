@@ -1,0 +1,42 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "CombatBloodSpurtFront_1",
+    "type": "int"
+  },
+  {
+    "name": "CombatBloodSpurtFront_2",
+    "type": "int"
+  },
+  {
+    "name": "CombatBloodSpurtBack_1",
+    "type": "int"
+  },
+  {
+    "name": "CombatBloodSpurtBack_2",
+    "type": "int"
+  },
+  {
+    "name": "GroundBlood1",
+    "type": "string"
+  },
+  {
+    "name": "GroundBlood2",
+    "type": "string"
+  },
+  {
+    "name": "GroundBlood3",
+    "type": "string"
+  },
+  {
+    "name": "GroundBlood4",
+    "type": "string"
+  },
+  {
+    "name": "GroundBlood5",
+    "type": "string"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "TerrainDesc",
+    "type": "string"
+  },
+  {
+    "name": "FootstepSprayRun",
+    "type": "int"
+  },
+  {
+    "name": "FootstepSprayWalk",
+    "type": "int"
+  },
+  {
+    "name": "SoundID",
+    "type": "int"
+  },
+  {
+    "name": "Flags",
+    "type": "int"
+  }
+]

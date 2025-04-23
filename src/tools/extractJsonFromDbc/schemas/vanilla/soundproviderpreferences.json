@@ -1,0 +1,98 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Description",
+    "type": "string"
+  },
+  {
+    "name": "Flags",
+    "type": "int"
+  },
+  {
+    "name": "EAXEnvironmentSelection",
+    "type": "int"
+  },
+  {
+    "name": "EAXDecayTime",
+    "type": "float"
+  },
+  {
+    "name": "EAX2EnvironmentSize",
+    "type": "float"
+  },
+  {
+    "name": "EAX2EnvironmentDiffusion",
+    "type": "float"
+  },
+  {
+    "name": "EAX2Room",
+    "type": "int"
+  },
+  {
+    "name": "EAX2RoomHF",
+    "type": "int"
+  },
+  {
+    "name": "EAX2DecayHFRatio",
+    "type": "float"
+  },
+  {
+    "name": "EAX2Reflections",
+    "type": "int"
+  },
+  {
+    "name": "EAX2ReflectionsDelay",
+    "type": "float"
+  },
+  {
+    "name": "EAX2Reverb",
+    "type": "int"
+  },
+  {
+    "name": "EAX2ReverbDelay",
+    "type": "float"
+  },
+  {
+    "name": "EAX2RoomRolloff",
+    "type": "float"
+  },
+  {
+    "name": "EAX2AirAbsorption",
+    "type": "float"
+  },
+  {
+    "name": "EAX3RoomLF",
+    "type": "int"
+  },
+  {
+    "name": "EAX3DecayLFRatio",
+    "type": "float"
+  },
+  {
+    "name": "EAX3EchoTime",
+    "type": "float"
+  },
+  {
+    "name": "EAX3EchoDepth",
+    "type": "float"
+  },
+  {
+    "name": "EAX3ModulationTime",
+    "type": "float"
+  },
+  {
+    "name": "EAX3ModulationDepth",
+    "type": "float"
+  },
+  {
+    "name": "EAX3HFReference",
+    "type": "float"
+  },
+  {
+    "name": "EAX3LFReference",
+    "type": "float"
+  }
+]

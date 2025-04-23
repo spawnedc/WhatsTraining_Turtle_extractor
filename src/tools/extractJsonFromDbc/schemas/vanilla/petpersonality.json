@@ -1,0 +1,46 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Name",
+    "type": "loc"
+  },
+  {
+    "name": "HappinessThreshold_1",
+    "type": "int"
+  },
+  {
+    "name": "HappinessThreshold_2",
+    "type": "int"
+  },
+  {
+    "name": "HappinessThreshold_3",
+    "type": "int"
+  },
+  {
+    "name": "HappinessDamage_1",
+    "type": "float"
+  },
+  {
+    "name": "HappinessDamage_2",
+    "type": "float"
+  },
+  {
+    "name": "HappinessDamage_3",
+    "type": "float"
+  },
+  {
+    "name": "DamageModifier_1",
+    "type": "float"
+  },
+  {
+    "name": "DamageModifier_2",
+    "type": "float"
+  },
+  {
+    "name": "DamageModifier_3",
+    "type": "float"
+  }
+]

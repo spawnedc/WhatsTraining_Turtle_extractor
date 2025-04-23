@@ -1,0 +1,30 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "VocalUIEnum",
+    "type": "int"
+  },
+  {
+    "name": "RaceID",
+    "type": "int"
+  },
+  {
+    "name": "NormalSoundID_1",
+    "type": "int"
+  },
+  {
+    "name": "NormalSoundID_2",
+    "type": "int"
+  },
+  {
+    "name": "PissedSound_1",
+    "type": "int"
+  },
+  {
+    "name": "PissedSound_2",
+    "type": "int"
+  }
+]

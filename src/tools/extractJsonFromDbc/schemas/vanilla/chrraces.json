@@ -1,0 +1,86 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Flags",
+    "type": "int"
+  },
+  {
+    "name": "FactionID",
+    "type": "int"
+  },
+  {
+    "name": "ExplorationSoundID",
+    "type": "int"
+  },
+  {
+    "name": "MaleDisplayID",
+    "type": "int"
+  },
+  {
+    "name": "FemaleDisplayID",
+    "type": "int"
+  },
+  {
+    "name": "ClientPrefix",
+    "type": "string"
+  },
+  {
+    "name": "Speed",
+    "type": "float"
+  },
+  {
+    "name": "BaseLanguage",
+    "type": "int"
+  },
+  {
+    "name": "CreatureType",
+    "type": "int"
+  },
+  {
+    "name": "LoginEffect",
+    "type": "int"
+  },
+  {
+    "name": "UnalteredVisualRaceID",
+    "type": "int"
+  },
+  {
+    "name": "ResSicknessSpellID",
+    "type": "int"
+  },
+  {
+    "name": "SplashSoundID",
+    "type": "int"
+  },
+  {
+    "name": "Field14",
+    "type": "uint"
+  },
+  {
+    "name": "ClientFileString",
+    "type": "string"
+  },
+  {
+    "name": "CinematicSequenceID",
+    "type": "int"
+  },
+  {
+    "name": "Name",
+    "type": "loc"
+  },
+  {
+    "name": "FacialHairCustomization1",
+    "type": "string"
+  },
+  {
+    "name": "FacialHairCustomization2",
+    "type": "string"
+  },
+  {
+    "name": "HairCustomization",
+    "type": "string"
+  }
+]

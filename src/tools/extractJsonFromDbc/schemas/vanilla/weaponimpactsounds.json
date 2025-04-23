@@ -1,0 +1,94 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "WeaponSubclassID",
+    "type": "int"
+  },
+  {
+    "name": "ParrySoundType",
+    "type": "int"
+  },
+  {
+    "name": "ImpactSoundID_1",
+    "type": "int"
+  },
+  {
+    "name": "ImpactSoundID_2",
+    "type": "int"
+  },
+  {
+    "name": "ImpactSoundID_3",
+    "type": "int"
+  },
+  {
+    "name": "ImpactSoundID_4",
+    "type": "int"
+  },
+  {
+    "name": "ImpactSoundID_5",
+    "type": "int"
+  },
+  {
+    "name": "ImpactSoundID_6",
+    "type": "int"
+  },
+  {
+    "name": "ImpactSoundID_7",
+    "type": "int"
+  },
+  {
+    "name": "ImpactSoundID_8",
+    "type": "int"
+  },
+  {
+    "name": "ImpactSoundID_9",
+    "type": "int"
+  },
+  {
+    "name": "ImpactSoundID_10",
+    "type": "int"
+  },
+  {
+    "name": "CritImpactSoundID_1",
+    "type": "int"
+  },
+  {
+    "name": "CritImpactSoundID_2",
+    "type": "int"
+  },
+  {
+    "name": "CritImpactSoundID_3",
+    "type": "int"
+  },
+  {
+    "name": "CritImpactSoundID_4",
+    "type": "int"
+  },
+  {
+    "name": "CritImpactSoundID_5",
+    "type": "int"
+  },
+  {
+    "name": "CritImpactSoundID_6",
+    "type": "int"
+  },
+  {
+    "name": "CritImpactSoundID_7",
+    "type": "int"
+  },
+  {
+    "name": "CritImpactSoundID_8",
+    "type": "int"
+  },
+  {
+    "name": "CritImpactSoundID_9",
+    "type": "int"
+  },
+  {
+    "name": "CritImpactSoundID_10",
+    "type": "int"
+  }
+]

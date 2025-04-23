@@ -1,0 +1,30 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Name",
+    "type": "loc"
+  },
+  {
+    "name": "SpellIconID",
+    "type": "int"
+  },
+  {
+    "name": "RaceMask",
+    "type": "int"
+  },
+  {
+    "name": "ClassMask",
+    "type": "int"
+  },
+  {
+    "name": "OrderIndex",
+    "type": "uint"
+  },
+  {
+    "name": "BackgroundFile",
+    "type": "string"
+  }
+]

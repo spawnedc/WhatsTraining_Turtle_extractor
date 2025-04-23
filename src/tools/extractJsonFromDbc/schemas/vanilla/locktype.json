@@ -1,0 +1,22 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Name",
+    "type": "loc"
+  },
+  {
+    "name": "ResourceName",
+    "type": "loc"
+  },
+  {
+    "name": "Verb",
+    "type": "loc"
+  },
+  {
+    "name": "CursorName",
+    "type": "string"
+  }
+]

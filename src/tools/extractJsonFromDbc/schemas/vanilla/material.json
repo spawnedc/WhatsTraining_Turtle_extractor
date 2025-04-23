@@ -1,0 +1,14 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Flags",
+    "type": "int"
+  },
+  {
+    "name": "FoleySoundID",
+    "type": "int"
+  }
+]

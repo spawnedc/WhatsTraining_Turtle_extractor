@@ -1,0 +1,22 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "SizeClass",
+    "type": "int"
+  },
+  {
+    "name": "TerrainTypeSoundID",
+    "type": "int"
+  },
+  {
+    "name": "SoundEntryID",
+    "type": "int"
+  },
+  {
+    "name": "SoundEntryIDWater",
+    "type": "int"
+  }
+]

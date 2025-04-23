@@ -1,0 +1,90 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Field01",
+    "type": "uint"
+  },
+  {
+    "name": "Field02",
+    "type": "uint"
+  },
+  {
+    "name": "Field03",
+    "type": "uint"
+  },
+  {
+    "name": "Field04",
+    "type": "uint"
+  },
+  {
+    "name": "Field05",
+    "type": "string"
+  },
+  {
+    "name": "Field06",
+    "type": "uint"
+  },
+  {
+    "name": "Field07",
+    "type": "string"
+  },
+  {
+    "name": "Field08",
+    "type": "string"
+  },
+  {
+    "name": "Field09",
+    "type": "string"
+  },
+  {
+    "name": "Field10",
+    "type": "uint"
+  },
+  {
+    "name": "Field11",
+    "type": "string"
+  },
+  {
+    "name": "Field12",
+    "type": "string"
+  },
+  {
+    "name": "Field13",
+    "type": "uint"
+  },
+  {
+    "name": "Field14",
+    "type": "uint"
+  },
+  {
+    "name": "Field15",
+    "type": "uint"
+  },
+  {
+    "name": "Field16",
+    "type": "uint"
+  },
+  {
+    "name": "Field17",
+    "type": "string"
+  },
+  {
+    "name": "Field18",
+    "type": "string"
+  },
+  {
+    "name": "Field19",
+    "type": "string"
+  },
+  {
+    "name": "Field20",
+    "type": "string"
+  },
+  {
+    "name": "Field21",
+    "type": "uint"
+  }
+]

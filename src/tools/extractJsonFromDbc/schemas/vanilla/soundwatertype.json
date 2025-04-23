@@ -1,0 +1,18 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "LiquidTypeID",
+    "type": "int"
+  },
+  {
+    "name": "FluidSpeed",
+    "type": "int"
+  },
+  {
+    "name": "SoundID",
+    "type": "int"
+  }
+]

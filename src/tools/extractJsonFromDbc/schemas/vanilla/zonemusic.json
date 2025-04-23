@@ -1,0 +1,34 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "SetName",
+    "type": "string"
+  },
+  {
+    "name": "SilenceIntervalMinDay",
+    "type": "uint"
+  },
+  {
+    "name": "SilenceIntervalMinNight",
+    "type": "uint"
+  },
+  {
+    "name": "SilenceIntervalMaxDay",
+    "type": "uint"
+  },
+  {
+    "name": "SilenceIntervalMaxNight",
+    "type": "uint"
+  },
+  {
+    "name": "SoundsDay",
+    "type": "int"
+  },
+  {
+    "name": "SoundsNight",
+    "type": "int"
+  }
+]

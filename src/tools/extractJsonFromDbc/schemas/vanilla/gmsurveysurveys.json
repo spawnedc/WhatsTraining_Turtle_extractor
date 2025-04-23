@@ -1,0 +1,46 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Q_1",
+    "type": "int"
+  },
+  {
+    "name": "Q_2",
+    "type": "int"
+  },
+  {
+    "name": "Q_3",
+    "type": "int"
+  },
+  {
+    "name": "Q_4",
+    "type": "int"
+  },
+  {
+    "name": "Q_5",
+    "type": "int"
+  },
+  {
+    "name": "Q_6",
+    "type": "int"
+  },
+  {
+    "name": "Q_7",
+    "type": "int"
+  },
+  {
+    "name": "Q_8",
+    "type": "int"
+  },
+  {
+    "name": "Q_9",
+    "type": "int"
+  },
+  {
+    "name": "Q_10",
+    "type": "int"
+  }
+]

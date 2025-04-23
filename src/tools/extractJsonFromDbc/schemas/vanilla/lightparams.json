@@ -1,0 +1,38 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "HighlightSky",
+    "type": "int"
+  },
+  {
+    "name": "LightSkyboxID",
+    "type": "int"
+  },
+  {
+    "name": "Glow",
+    "type": "float"
+  },
+  {
+    "name": "WaterShallowAlpha",
+    "type": "float"
+  },
+  {
+    "name": "WaterDeepAlpha",
+    "type": "float"
+  },
+  {
+    "name": "OceanShallowAlpha",
+    "type": "float"
+  },
+  {
+    "name": "OceanDeepAlpha",
+    "type": "float"
+  },
+  {
+    "name": "Flags",
+    "type": "int"
+  }
+]

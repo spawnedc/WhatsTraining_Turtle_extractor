@@ -1,0 +1,66 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Flags",
+    "type": "int"
+  },
+  {
+    "name": "ModelName",
+    "type": "string"
+  },
+  {
+    "name": "SizeClass",
+    "type": "int"
+  },
+  {
+    "name": "ModelScale",
+    "type": "float"
+  },
+  {
+    "name": "BloodID",
+    "type": "int"
+  },
+  {
+    "name": "FootprintTextureID",
+    "type": "int"
+  },
+  {
+    "name": "FootprintTextureLength",
+    "type": "float"
+  },
+  {
+    "name": "FootprintTextureWidth",
+    "type": "float"
+  },
+  {
+    "name": "FootprintTextureScale",
+    "type": "float"
+  },
+  {
+    "name": "FoleyMaterialID",
+    "type": "int"
+  },
+  {
+    "name": "FootstepShakeSize",
+    "type": "int"
+  },
+  {
+    "name": "DeathThudShakeSize",
+    "type": "int"
+  },
+  {
+    "name": "CollisionWidth",
+    "type": "float"
+  },
+  {
+    "name": "CollisionHeight",
+    "type": "float"
+  },
+  {
+    "name": "MountHeight",
+    "type": "float"
+  }
+]

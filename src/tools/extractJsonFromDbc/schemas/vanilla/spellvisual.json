@@ -1,0 +1,66 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "PrecastKit",
+    "type": "int"
+  },
+  {
+    "name": "CastKit",
+    "type": "int"
+  },
+  {
+    "name": "ImpactKit",
+    "type": "int"
+  },
+  {
+    "name": "StateKit",
+    "type": "int"
+  },
+  {
+    "name": "StateDoneKit",
+    "type": "int"
+  },
+  {
+    "name": "ChannelKit",
+    "type": "int"
+  },
+  {
+    "name": "HasMissile",
+    "type": "int"
+  },
+  {
+    "name": "MissileModel",
+    "type": "int"
+  },
+  {
+    "name": "MissilePathType",
+    "type": "int"
+  },
+  {
+    "name": "MissileDestinationAttachment",
+    "type": "int"
+  },
+  {
+    "name": "MissileSound",
+    "type": "int"
+  },
+  {
+    "name": "AnimEventSoundID",
+    "type": "int"
+  },
+  {
+    "name": "Flags",
+    "type": "int"
+  },
+  {
+    "name": "CasterImpactKit",
+    "type": "int"
+  },
+  {
+    "name": "TargetImpactKit",
+    "type": "int"
+  }
+]

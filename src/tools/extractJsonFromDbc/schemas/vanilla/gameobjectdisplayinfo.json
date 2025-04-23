@@ -1,0 +1,50 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "ModelName",
+    "type": "string"
+  },
+  {
+    "name": "Sound_1",
+    "type": "int"
+  },
+  {
+    "name": "Sound_2",
+    "type": "int"
+  },
+  {
+    "name": "Sound_3",
+    "type": "int"
+  },
+  {
+    "name": "Sound_4",
+    "type": "int"
+  },
+  {
+    "name": "Sound_5",
+    "type": "int"
+  },
+  {
+    "name": "Sound_6",
+    "type": "int"
+  },
+  {
+    "name": "Sound_7",
+    "type": "int"
+  },
+  {
+    "name": "Sound_8",
+    "type": "int"
+  },
+  {
+    "name": "Sound_9",
+    "type": "int"
+  },
+  {
+    "name": "Sound_10",
+    "type": "int"
+  }
+]

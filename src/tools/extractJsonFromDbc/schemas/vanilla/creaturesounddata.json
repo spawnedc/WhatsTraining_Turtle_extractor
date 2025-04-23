@@ -1,0 +1,122 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "SoundExertionID",
+    "type": "int"
+  },
+  {
+    "name": "SoundExertionCriticalID",
+    "type": "int"
+  },
+  {
+    "name": "SoundInjuryID",
+    "type": "int"
+  },
+  {
+    "name": "SoundInjuryCriticalID",
+    "type": "int"
+  },
+  {
+    "name": "SoundInjuryCrushingBlowID",
+    "type": "int"
+  },
+  {
+    "name": "SoundDeathID",
+    "type": "int"
+  },
+  {
+    "name": "SoundStunID",
+    "type": "int"
+  },
+  {
+    "name": "SoundStandID",
+    "type": "int"
+  },
+  {
+    "name": "SoundFootstepID",
+    "type": "int"
+  },
+  {
+    "name": "SoundAggroID",
+    "type": "int"
+  },
+  {
+    "name": "SoundWingFlapID",
+    "type": "int"
+  },
+  {
+    "name": "SoundWingGlideID",
+    "type": "int"
+  },
+  {
+    "name": "SoundAlertID",
+    "type": "int"
+  },
+  {
+    "name": "SoundFidget_1",
+    "type": "int"
+  },
+  {
+    "name": "SoundFidget_2",
+    "type": "int"
+  },
+  {
+    "name": "SoundFidget_3",
+    "type": "int"
+  },
+  {
+    "name": "SoundFidget_4",
+    "type": "int"
+  },
+  {
+    "name": "CustomAttack_1",
+    "type": "int"
+  },
+  {
+    "name": "CustomAttack_2",
+    "type": "int"
+  },
+  {
+    "name": "CustomAttack_3",
+    "type": "int"
+  },
+  {
+    "name": "CustomAttack_4",
+    "type": "int"
+  },
+  {
+    "name": "NPCSoundID",
+    "type": "int"
+  },
+  {
+    "name": "LoopSoundID",
+    "type": "int"
+  },
+  {
+    "name": "CreatureImpactType",
+    "type": "int"
+  },
+  {
+    "name": "SoundJumpStartID",
+    "type": "int"
+  },
+  {
+    "name": "SoundJumpEndID",
+    "type": "int"
+  },
+  {
+    "name": "SoundPetAttackID",
+    "type": "int"
+  },
+  {
+    "name": "SoundPetOrderID",
+    "type": "int"
+  },
+  {
+    "name": "SoundPetDismissID",
+    "type": "int"
+  }
+]

@@ -1,0 +1,78 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "PathID",
+    "type": "int"
+  },
+  {
+    "name": "Locx_1",
+    "type": "float"
+  },
+  {
+    "name": "Locx_2",
+    "type": "float"
+  },
+  {
+    "name": "Locx_3",
+    "type": "float"
+  },
+  {
+    "name": "Locx_4",
+    "type": "float"
+  },
+  {
+    "name": "Locx_5",
+    "type": "float"
+  },
+  {
+    "name": "Locx_6",
+    "type": "float"
+  },
+  {
+    "name": "Locx_7",
+    "type": "float"
+  },
+  {
+    "name": "Locx_8",
+    "type": "float"
+  },
+  {
+    "name": "Locy_1",
+    "type": "float"
+  },
+  {
+    "name": "Locy_2",
+    "type": "float"
+  },
+  {
+    "name": "Locy_3",
+    "type": "float"
+  },
+  {
+    "name": "Locy_4",
+    "type": "float"
+  },
+  {
+    "name": "Locy_5",
+    "type": "float"
+  },
+  {
+    "name": "Locy_6",
+    "type": "float"
+  },
+  {
+    "name": "Locy_7",
+    "type": "float"
+  },
+  {
+    "name": "Locy_8",
+    "type": "float"
+  },
+  {
+    "name": "LegIndex",
+    "type": "int"
+  }
+]

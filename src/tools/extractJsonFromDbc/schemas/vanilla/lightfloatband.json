@@ -1,0 +1,138 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Num",
+    "type": "int"
+  },
+  {
+    "name": "Time_1",
+    "type": "int"
+  },
+  {
+    "name": "Time_2",
+    "type": "int"
+  },
+  {
+    "name": "Time_3",
+    "type": "int"
+  },
+  {
+    "name": "Time_4",
+    "type": "int"
+  },
+  {
+    "name": "Time_5",
+    "type": "int"
+  },
+  {
+    "name": "Time_6",
+    "type": "int"
+  },
+  {
+    "name": "Time_7",
+    "type": "int"
+  },
+  {
+    "name": "Time_8",
+    "type": "int"
+  },
+  {
+    "name": "Time_9",
+    "type": "int"
+  },
+  {
+    "name": "Time_10",
+    "type": "int"
+  },
+  {
+    "name": "Time_11",
+    "type": "int"
+  },
+  {
+    "name": "Time_12",
+    "type": "int"
+  },
+  {
+    "name": "Time_13",
+    "type": "int"
+  },
+  {
+    "name": "Time_14",
+    "type": "int"
+  },
+  {
+    "name": "Time_15",
+    "type": "int"
+  },
+  {
+    "name": "Time_16",
+    "type": "int"
+  },
+  {
+    "name": "Data_1",
+    "type": "float"
+  },
+  {
+    "name": "Data_2",
+    "type": "float"
+  },
+  {
+    "name": "Data_3",
+    "type": "float"
+  },
+  {
+    "name": "Data_4",
+    "type": "float"
+  },
+  {
+    "name": "Data_5",
+    "type": "float"
+  },
+  {
+    "name": "Data_6",
+    "type": "float"
+  },
+  {
+    "name": "Data_7",
+    "type": "float"
+  },
+  {
+    "name": "Data_8",
+    "type": "float"
+  },
+  {
+    "name": "Data_9",
+    "type": "float"
+  },
+  {
+    "name": "Data_10",
+    "type": "float"
+  },
+  {
+    "name": "Data_11",
+    "type": "float"
+  },
+  {
+    "name": "Data_12",
+    "type": "float"
+  },
+  {
+    "name": "Data_13",
+    "type": "float"
+  },
+  {
+    "name": "Data_14",
+    "type": "float"
+  },
+  {
+    "name": "Data_15",
+    "type": "float"
+  },
+  {
+    "name": "Data_16",
+    "type": "float"
+  }
+]

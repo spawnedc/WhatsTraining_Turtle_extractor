@@ -1,0 +1,18 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Name",
+    "type": "string"
+  },
+  {
+    "name": "RaceID",
+    "type": "int"
+  },
+  {
+    "name": "Sex",
+    "type": "int"
+  }
+]

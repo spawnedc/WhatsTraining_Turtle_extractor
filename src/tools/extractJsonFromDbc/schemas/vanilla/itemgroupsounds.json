@@ -1,0 +1,22 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "SoundID_1",
+    "type": "int"
+  },
+  {
+    "name": "SoundID_2",
+    "type": "int"
+  },
+  {
+    "name": "SoundID_3",
+    "type": "int"
+  },
+  {
+    "name": "SoundID_4",
+    "type": "int"
+  }
+]

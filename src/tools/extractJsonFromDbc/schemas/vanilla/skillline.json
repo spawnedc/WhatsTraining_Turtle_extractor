@@ -1,0 +1,26 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "CategoryID",
+    "type": "int"
+  },
+  {
+    "name": "SkillCostsID",
+    "type": "int"
+  },
+  {
+    "name": "DisplayName",
+    "type": "loc"
+  },
+  {
+    "name": "Description",
+    "type": "loc"
+  },
+  {
+    "name": "SpellIconID",
+    "type": "int"
+  }
+]

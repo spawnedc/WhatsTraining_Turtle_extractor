@@ -1,0 +1,18 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "Violencelevel_1",
+    "type": "int"
+  },
+  {
+    "name": "Violencelevel_2",
+    "type": "int"
+  },
+  {
+    "name": "Violencelevel_3",
+    "type": "int"
+  }
+]

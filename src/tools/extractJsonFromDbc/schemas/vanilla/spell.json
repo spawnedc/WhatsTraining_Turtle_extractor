@@ -1,0 +1,566 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "School",
+    "type": "int"
+  },
+  {
+    "name": "Category",
+    "type": "int"
+  },
+  {
+    "name": "CastUI",
+    "type": "int"
+  },
+  {
+    "name": "DispelType",
+    "type": "int"
+  },
+  {
+    "name": "Mechanic",
+    "type": "int"
+  },
+  {
+    "name": "Attributes",
+    "type": "int"
+  },
+  {
+    "name": "AttributesEx",
+    "type": "int"
+  },
+  {
+    "name": "AttributesEx2",
+    "type": "int"
+  },
+  {
+    "name": "AttributesEx3",
+    "type": "int"
+  },
+  {
+    "name": "AttributesEx4",
+    "type": "int"
+  },
+  {
+    "name": "ShapeshiftMask",
+    "type": "int"
+  },
+  {
+    "name": "Shapeshiftexclude",
+    "type": "int"
+  },
+  {
+    "name": "Targets",
+    "type": "int"
+  },
+  {
+    "name": "TargetCreatureType",
+    "type": "int"
+  },
+  {
+    "name": "RequiresSpellFocus",
+    "type": "int"
+  },
+  {
+    "name": "CasterAuraState",
+    "type": "int"
+  },
+  {
+    "name": "TargetAuraState",
+    "type": "int"
+  },
+  {
+    "name": "CastingTimeIndex",
+    "type": "int"
+  },
+  {
+    "name": "RecoveryTime",
+    "type": "int"
+  },
+  {
+    "name": "CategoryRecoveryTime",
+    "type": "int"
+  },
+  {
+    "name": "InterruptFlags",
+    "type": "int"
+  },
+  {
+    "name": "AuraInterruptFlags",
+    "type": "int"
+  },
+  {
+    "name": "ChannelInterruptFlags",
+    "type": "int"
+  },
+  {
+    "name": "ProcTypeMask",
+    "type": "int"
+  },
+  {
+    "name": "ProcChance",
+    "type": "int"
+  },
+  {
+    "name": "ProcCharges",
+    "type": "int"
+  },
+  {
+    "name": "MaxLevel",
+    "type": "int"
+  },
+  {
+    "name": "BaseLevel",
+    "type": "int"
+  },
+  {
+    "name": "SpellLevel",
+    "type": "int"
+  },
+  {
+    "name": "DurationIndex",
+    "type": "int"
+  },
+  {
+    "name": "PowerType",
+    "type": "int"
+  },
+  {
+    "name": "ManaCost",
+    "type": "int"
+  },
+  {
+    "name": "ManaCostPerLevel",
+    "type": "int"
+  },
+  {
+    "name": "ManaCostPerSecond",
+    "type": "int"
+  },
+  {
+    "name": "ManaCostPerSecondPerLevel",
+    "type": "int"
+  },
+  {
+    "name": "RangeIndex",
+    "type": "int"
+  },
+  {
+    "name": "Speed",
+    "type": "float"
+  },
+  {
+    "name": "ModalNextSpell",
+    "type": "int"
+  },
+  {
+    "name": "StackAmount",
+    "type": "int"
+  },
+  {
+    "name": "Totem_1",
+    "type": "int"
+  },
+  {
+    "name": "Totem_2",
+    "type": "int"
+  },
+  {
+    "name": "Reagent_1",
+    "type": "int"
+  },
+  {
+    "name": "Reagent_2",
+    "type": "int"
+  },
+  {
+    "name": "Reagent_3",
+    "type": "int"
+  },
+  {
+    "name": "Reagent_4",
+    "type": "int"
+  },
+  {
+    "name": "Reagent_5",
+    "type": "int"
+  },
+  {
+    "name": "Reagent_6",
+    "type": "int"
+  },
+  {
+    "name": "Reagent_7",
+    "type": "int"
+  },
+  {
+    "name": "Reagent_8",
+    "type": "int"
+  },
+  {
+    "name": "ReagentCount_1",
+    "type": "int"
+  },
+  {
+    "name": "ReagentCount_2",
+    "type": "int"
+  },
+  {
+    "name": "ReagentCount_3",
+    "type": "int"
+  },
+  {
+    "name": "ReagentCount_4",
+    "type": "int"
+  },
+  {
+    "name": "ReagentCount_5",
+    "type": "int"
+  },
+  {
+    "name": "ReagentCount_6",
+    "type": "int"
+  },
+  {
+    "name": "ReagentCount_7",
+    "type": "int"
+  },
+  {
+    "name": "ReagentCount_8",
+    "type": "int"
+  },
+  {
+    "name": "EquippedItemClass",
+    "type": "int"
+  },
+  {
+    "name": "EquippedItemSubclass",
+    "type": "int"
+  },
+  {
+    "name": "EquippedItemInvType",
+    "type": "int"
+  },
+  {
+    "name": "Effect_1",
+    "type": "int"
+  },
+  {
+    "name": "Effect_2",
+    "type": "int"
+  },
+  {
+    "name": "Effect_3",
+    "type": "int"
+  },
+  {
+    "name": "EffectDieSides_1",
+    "type": "int"
+  },
+  {
+    "name": "EffectDieSides_2",
+    "type": "int"
+  },
+  {
+    "name": "EffectDieSides_3",
+    "type": "int"
+  },
+  {
+    "name": "EffectBaseDice_1",
+    "type": "int"
+  },
+  {
+    "name": "EffectBaseDice_2",
+    "type": "int"
+  },
+  {
+    "name": "EffectBaseDice_3",
+    "type": "int"
+  },
+  {
+    "name": "EffectDicePerLevel_1",
+    "type": "float"
+  },
+  {
+    "name": "EffectDicePerLevel_2",
+    "type": "float"
+  },
+  {
+    "name": "EffectDicePerLevel_3",
+    "type": "float"
+  },
+  {
+    "name": "EffectRealPointsPerLevel_1",
+    "type": "float"
+  },
+  {
+    "name": "EffectRealPointsPerLevel_2",
+    "type": "float"
+  },
+  {
+    "name": "EffectRealPointsPerLevel_3",
+    "type": "float"
+  },
+  {
+    "name": "EffectBasePoints_1",
+    "type": "int"
+  },
+  {
+    "name": "EffectBasePoints_2",
+    "type": "int"
+  },
+  {
+    "name": "EffectBasePoints_3",
+    "type": "int"
+  },
+  {
+    "name": "EffectMechanic_1",
+    "type": "int"
+  },
+  {
+    "name": "EffectMechanic_2",
+    "type": "int"
+  },
+  {
+    "name": "EffectMechanic_3",
+    "type": "int"
+  },
+  {
+    "name": "ImplicitTargetA_1",
+    "type": "int"
+  },
+  {
+    "name": "ImplicitTargetA_2",
+    "type": "int"
+  },
+  {
+    "name": "ImplicitTargetA_3",
+    "type": "int"
+  },
+  {
+    "name": "ImplicitTargetB_1",
+    "type": "int"
+  },
+  {
+    "name": "ImplicitTargetB_2",
+    "type": "int"
+  },
+  {
+    "name": "ImplicitTargetB_3",
+    "type": "int"
+  },
+  {
+    "name": "EffectRadiusIndex_1",
+    "type": "int"
+  },
+  {
+    "name": "EffectRadiusIndex_2",
+    "type": "int"
+  },
+  {
+    "name": "EffectRadiusIndex_3",
+    "type": "int"
+  },
+  {
+    "name": "EffectAura_1",
+    "type": "int"
+  },
+  {
+    "name": "EffectAura_2",
+    "type": "int"
+  },
+  {
+    "name": "EffectAura_3",
+    "type": "int"
+  },
+  {
+    "name": "EffectAmplitude_1",
+    "type": "int"
+  },
+  {
+    "name": "EffectAmplitude_2",
+    "type": "int"
+  },
+  {
+    "name": "EffectAmplitude_3",
+    "type": "int"
+  },
+  {
+    "name": "EffectMultipleValue_1",
+    "type": "float"
+  },
+  {
+    "name": "EffectMultipleValue_2",
+    "type": "float"
+  },
+  {
+    "name": "EffectMultipleValue_3",
+    "type": "float"
+  },
+  {
+    "name": "EffectChainTarget_1",
+    "type": "int"
+  },
+  {
+    "name": "EffectChainTarget_2",
+    "type": "int"
+  },
+  {
+    "name": "EffectChainTarget_3",
+    "type": "int"
+  },
+  {
+    "name": "EffectItemType_1",
+    "type": "int"
+  },
+  {
+    "name": "EffectItemType_2",
+    "type": "int"
+  },
+  {
+    "name": "EffectItemType_3",
+    "type": "int"
+  },
+  {
+    "name": "EffectMiscValue_1",
+    "type": "int"
+  },
+  {
+    "name": "EffectMiscValue_2",
+    "type": "int"
+  },
+  {
+    "name": "EffectMiscValue_3",
+    "type": "int"
+  },
+  {
+    "name": "EffectTriggerSpell_1",
+    "type": "int"
+  },
+  {
+    "name": "EffectTriggerSpell_2",
+    "type": "int"
+  },
+  {
+    "name": "EffectTriggerSpell_3",
+    "type": "int"
+  },
+  {
+    "name": "EffectPointsPerCombo_1",
+    "type": "float"
+  },
+  {
+    "name": "EffectPointsPerCombo_2",
+    "type": "float"
+  },
+  {
+    "name": "EffectPointsPerCombo_3",
+    "type": "float"
+  },
+  {
+    "name": "SpellVisualID_1",
+    "type": "int"
+  },
+  {
+    "name": "SpellVisualID_2",
+    "type": "int"
+  },
+  {
+    "name": "SpellIconID",
+    "type": "int"
+  },
+  {
+    "name": "ActiveIconID",
+    "type": "int"
+  },
+  {
+    "name": "SpellPriority",
+    "type": "int"
+  },
+  {
+    "name": "Name",
+    "type": "loc"
+  },
+  {
+    "name": "NameSubtext",
+    "type": "loc"
+  },
+  {
+    "name": "Description",
+    "type": "loc"
+  },
+  {
+    "name": "AuraDescription",
+    "type": "loc"
+  },
+  {
+    "name": "ManaCostPct",
+    "type": "int"
+  },
+  {
+    "name": "StartRecoveryCategory",
+    "type": "int"
+  },
+  {
+    "name": "StartRecoveryTime",
+    "type": "int"
+  },
+  {
+    "name": "MaxTargetLevel",
+    "type": "int"
+  },
+  {
+    "name": "SpellClassSet",
+    "type": "int"
+  },
+  {
+    "name": "SpellClassMask_1",
+    "type": "int"
+  },
+  {
+    "name": "SpellClassMask_2",
+    "type": "int"
+  },
+  {
+    "name": "MaxTargets",
+    "type": "int"
+  },
+  {
+    "name": "DefenseType",
+    "type": "int"
+  },
+  {
+    "name": "PreventionType",
+    "type": "int"
+  },
+  {
+    "name": "StanceBarOrder",
+    "type": "int"
+  },
+  {
+    "name": "DamageMultiplier_1",
+    "type": "float"
+  },
+  {
+    "name": "DamageMultiplier_2",
+    "type": "float"
+  },
+  {
+    "name": "DamageMultiplier_3",
+    "type": "float"
+  },
+  {
+    "name": "MinFactionId",
+    "type": "int"
+  },
+  {
+    "name": "MinReputation",
+    "type": "int"
+  },
+  {
+    "name": "RequiredAuraVision",
+    "type": "int"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "FactionID",
+    "type": "int"
+  },
+  {
+    "name": "DepositRate",
+    "type": "int"
+  },
+  {
+    "name": "ConsignmentRate",
+    "type": "int"
+  },
+  {
+    "name": "Name",
+    "type": "loc"
+  }
+]

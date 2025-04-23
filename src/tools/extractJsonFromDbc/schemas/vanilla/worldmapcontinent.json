@@ -1,0 +1,54 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "MapID",
+    "type": "int"
+  },
+  {
+    "name": "LeftBoundary",
+    "type": "uint"
+  },
+  {
+    "name": "RightBoundary",
+    "type": "uint"
+  },
+  {
+    "name": "TopBoundary",
+    "type": "uint"
+  },
+  {
+    "name": "BottomBoundary",
+    "type": "uint"
+  },
+  {
+    "name": "ContinentOffsetX",
+    "type": "float"
+  },
+  {
+    "name": "ContinentOffsetY",
+    "type": "float"
+  },
+  {
+    "name": "Scale",
+    "type": "float"
+  },
+  {
+    "name": "TaxiMinX",
+    "type": "float"
+  },
+  {
+    "name": "TaxiMinY",
+    "type": "float"
+  },
+  {
+    "name": "TaxiMaxX",
+    "type": "float"
+  },
+  {
+    "name": "TaxiMaxY",
+    "type": "float"
+  }
+]

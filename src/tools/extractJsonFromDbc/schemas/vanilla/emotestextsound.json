@@ -1,0 +1,22 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "EmotesTextID",
+    "type": "int"
+  },
+  {
+    "name": "RaceID",
+    "type": "int"
+  },
+  {
+    "name": "SexID",
+    "type": "int"
+  },
+  {
+    "name": "SoundID",
+    "type": "int"
+  }
+]

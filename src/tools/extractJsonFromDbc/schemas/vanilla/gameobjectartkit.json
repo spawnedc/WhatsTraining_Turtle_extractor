@@ -1,0 +1,34 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "TextureVariation1",
+    "type": "string"
+  },
+  {
+    "name": "TextureVariation2",
+    "type": "string"
+  },
+  {
+    "name": "TextureVariation3",
+    "type": "string"
+  },
+  {
+    "name": "AttachModel1",
+    "type": "string"
+  },
+  {
+    "name": "AttachModel2",
+    "type": "string"
+  },
+  {
+    "name": "AttachModel3",
+    "type": "string"
+  },
+  {
+    "name": "AttachModel4",
+    "type": "string"
+  }
+]

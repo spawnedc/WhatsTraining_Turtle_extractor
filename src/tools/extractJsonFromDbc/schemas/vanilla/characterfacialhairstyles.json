@@ -1,0 +1,42 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "RaceID",
+    "type": "int"
+  },
+  {
+    "name": "SexID",
+    "type": "int"
+  },
+  {
+    "name": "VariationID",
+    "type": "int"
+  },
+  {
+    "name": "Geoset_1",
+    "type": "int"
+  },
+  {
+    "name": "Geoset_2",
+    "type": "int"
+  },
+  {
+    "name": "Geoset_3",
+    "type": "int"
+  },
+  {
+    "name": "Geoset_4",
+    "type": "int"
+  },
+  {
+    "name": "Geoset_5",
+    "type": "int"
+  },
+  {
+    "name": "Geoset_6",
+    "type": "int"
+  }
+]

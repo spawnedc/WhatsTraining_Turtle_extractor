@@ -1,0 +1,42 @@
+[
+  {
+    "name": "ID",
+    "type": "int"
+  },
+  {
+    "name": "RaceID",
+    "type": "int"
+  },
+  {
+    "name": "SexID",
+    "type": "int"
+  },
+  {
+    "name": "SectionType",
+    "type": "int"
+  },
+  {
+    "name": "VariationIndex",
+    "type": "int"
+  },
+  {
+    "name": "ColorIndex",
+    "type": "int"
+  },
+  {
+    "name": "TextureName1",
+    "type": "string"
+  },
+  {
+    "name": "TextureName2",
+    "type": "string"
+  },
+  {
+    "name": "TextureName3",
+    "type": "string"
+  },
+  {
+    "name": "Flags",
+    "type": "int"
+  }
+]
