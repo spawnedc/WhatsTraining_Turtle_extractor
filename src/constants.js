@@ -28,6 +28,14 @@ const SERVER_HIDDEN_SPELLS = [
   27803, // Priest: Holy Nova Rank 4
   27804, // Priest: Holy Nova Rank 5
   27805, // Priest: Holy Nova Rank 6
+  20187, // Paladin: Judgement of Righteousness Rank 1
+  20280, // Paladin: Judgement of Righteousness Rank 2
+  20281, // Paladin: Judgement of Righteousness Rank 3
+  20282, // Paladin: Judgement of Righteousness Rank 4
+  20283, // Paladin: Judgement of Righteousness Rank 5
+  20284, // Paladin: Judgement of Righteousness Rank 6
+  20285, // Paladin: Judgement of Righteousness Rank 7
+  20286, // Paladin: Judgement of Righteousness Rank 8
 ]
 
 export {
