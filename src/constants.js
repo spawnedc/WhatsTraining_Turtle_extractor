@@ -36,6 +36,7 @@ const SERVER_HIDDEN_SPELLS = [
   20284, // Paladin: Judgement of Righteousness Rank 6
   20285, // Paladin: Judgement of Righteousness Rank 7
   20286, // Paladin: Judgement of Righteousness Rank 8
+  21084, // Paladin: Seal of Righteousness
 ]
 
 export {
