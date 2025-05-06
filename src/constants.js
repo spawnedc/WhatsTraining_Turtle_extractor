@@ -15,6 +15,10 @@ const SPELL_ATTRIBUTES = {
   SPELL_ATTR0_DO_NOT_LOG: 9,
 }
 
+const SPELL_EFFECTS = {
+  SPELL_EFFECT_LEARN_SPELL: 36,
+}
+
 /**
  * For some reason these are not excluded by any filters and I couldn't find a
  * way to exclude them. Please let me know if there's a better way.
@@ -50,4 +54,5 @@ export {
   LUA_DIR,
   SPELL_ATTRIBUTES,
   SERVER_HIDDEN_SPELLS,
+  SPELL_EFFECTS,
 }

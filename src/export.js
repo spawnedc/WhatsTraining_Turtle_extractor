@@ -6,25 +6,23 @@ import {
   CLASSES_DIR,
   SPELL_ATTRIBUTES,
   SERVER_HIDDEN_SPELLS,
+  SPELL_EFFECTS,
   DBC_DIR,
   JSON_DIR,
 } from "./constants.js"
 import convertDbcToJson from "./tools/extractJsonFromDbc/index.js"
+import arrayToObject from "./utils/arrayToObject.js"
 
 const hiddenSpellAttributes = [
   SPELL_ATTRIBUTES.SPELL_ATTR0_DO_NOT_DISPLAY_SPELLBOOK_AURA_ICON_COMBAT_LOG,
 ]
 
+const excludedSpellEffects = [SPELL_EFFECTS.SPELL_EFFECT_LEARN_SPELL]
+
 const EXTRACT_DBC = process.argv[2] === "true"
 
 const extractClassData = async () => {
   execSync(`mkdir -p ${CLASSES_DIR}`)
-
-  const arrayToObject = (array, keyField) =>
-    array.reduce((obj, item) => {
-      obj[item[keyField]] = item
-      return obj
-    }, {})
 
   const extractFile = async (dbName) => {
     const moduleFile = `${join(JSON_DIR, dbName)}.json`
@@ -187,6 +185,16 @@ const extractClassData = async () => {
       .map((sla) => {
         const spell = allSpellsById[sla.Spell]
         if (!spell) {
+          return undefined
+        }
+        if (spell.Name.startsWith("[Deprecated]")) {
+          return undefined
+        }
+        if (
+          excludedSpellEffects.includes(spell.Effect_1) ||
+          excludedSpellEffects.includes(spell.Effect_2) ||
+          excludedSpellEffects.includes(spell.Effect_3)
+        ) {
           return undefined
         }
         const spellAttributes =
