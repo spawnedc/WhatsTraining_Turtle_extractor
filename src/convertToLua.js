@@ -29,10 +29,10 @@ const convertToLua = () => {
         JSON.stringify(classData.overriddenSpellsMap),
         1
       )
-      content.push(`OverridenSpells["${className}"] = ${overriddenSpellsMap}`)
+      content.push(`OverridenSpells["${className.toUpperCase()}"] = ${overriddenSpellsMap}`)
     }
 
-    content.push(`ClassSpellsByLevel["${className}"] = ${luaContent}`)
+    content.push(`ClassSpellsByLevel["${className.toUpperCase()}"] = ${luaContent}`)
 
     writeFileSync(join(LUA_DIR, `${className}.lua`), content.join("\n"))
   })
